@@ -41,7 +41,7 @@ const Footer = () => {
                     </Col>
                 </Row>
                 <div>
-                    <p className={footerStyles.copyright}>Copyright © E&M Acoustic LLC {year}</p>  
+                    <p className={footerStyles.copyright}>Copyright © E&M Acoustic LLC {year}. All Rights Reserved</p>  
                 </div>
             </Container>
         </footer>
