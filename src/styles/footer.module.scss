@@ -1,3 +1,28 @@
 .container {
-    margin: 1em;
+    background: darkgreen;
+
+    div {
+        div {
+            h4 {
+                color: #ddd;
+            }
+        }
+
+        p {
+            color: #ddd;
+        }
+    }
+}
+
+.footer-info {
+    padding: 1em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.copyright {
+    padding: 1em;
+    width: 100%;
+    text-align: center;
 }
