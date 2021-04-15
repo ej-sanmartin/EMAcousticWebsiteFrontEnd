@@ -1,3 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap');
+
+@import './variables';
+@import 'mixins';
+
 * {
-    color: red;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+    color: $base-font-colour;
+    margin: 0;
+    padding: 0;
+}
+
+.layout-content-order {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.website-real-estate {
+    flex-grow: 1;
 }

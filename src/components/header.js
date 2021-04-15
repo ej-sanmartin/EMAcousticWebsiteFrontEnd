@@ -1,26 +1,48 @@
 import React from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import { Link } from 'gatsby';
+
+import { Navbar, Nav, Container } from 'react-bootstrap';
+
+import * as headerStyles from '../styles/header.module.scss';
 
 const Header = () => {
     return (
         <header>
-            <h1>E&M Acoustic</h1>
-            <nav>
-                <ul>
-                    <li>
-                        <Link to="/">Home</Link>
-                    </li>
-                    <li>
-                        <Link to="/about">About</Link>
-                    </li>
-                    <li>
-                        <Link to="/portfolio">Portfolio</Link>
-                    </li>
-                    <li>
-                        <Link to="/contact">Contact</Link>
-                    </li>
-                </ul>
-            </nav>
+            <Navbar collapseOnSelect expand="sm">
+                <Container>
+                    <Navbar.Brand>
+                        <Link to="/">
+                            <h1 className={headerStyles.logo}>E&M Acoustic</h1>
+                        </Link>        
+                    </Navbar.Brand>
+                    <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+                    <Navbar.Collapse id="responsive-navbar-nav">
+                        <Nav className="justify-content-center" style={{ width: "100%" }}>
+                            <Nav.Item as="li">
+                                <Nav.Link>
+                                    <Link className={headerStyles.pageLinks} to="/">Home</Link> 
+                                </Nav.Link>
+                            </Nav.Item>
+                            <Nav.Item as="li">
+                                <Nav.Link>
+                                   <Link to="/about">About</Link> 
+                                </Nav.Link>
+                            </Nav.Item>
+                            <Nav.Item as="li">
+                                <Nav.Link>
+                                    <Link to="/portfolio">Portfolio</Link>
+                                </Nav.Link>
+                            </Nav.Item>
+                            <Nav.Item as="li">
+                                <Nav.Link>
+                                    <Link to="/contact">Contact</Link>
+                                </Nav.Link>
+                            </Nav.Item> 
+                        </Nav>
+                    </Navbar.Collapse>
+                </Container>
+            </Navbar>
         </header>
     );
 }

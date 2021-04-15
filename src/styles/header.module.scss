@@ -1,0 +1,28 @@
+@import 'mixins';
+@import './variables';
+
+@media only screen
+and (min-device-width: 350px)
+and (max-device-width: 667px)
+and (-webkit-min-device-pixel-ratio: 2) {
+
+    .logo {
+        @include center-item;
+    }
+
+    .responsiveHamburger {
+        color: red;
+    }
+}
+
+.logo {
+    margin-right: 2em;
+}
+
+.pageLinks {
+    color: $base-font-colour;
+
+    &:hover {
+        text-decoration: none;
+    }
+}
