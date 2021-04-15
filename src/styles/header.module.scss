@@ -23,7 +23,7 @@ and (-webkit-min-device-pixel-ratio: 2) {
     }
 }
 
-.pageLinks {
+.page-links {
     color: $base-font-colour;
 
     &:hover {
@@ -31,11 +31,29 @@ and (-webkit-min-device-pixel-ratio: 2) {
     }
 }
 
-.phoneIcon {
+.phone-icon {
     margin-left: .2em;
     margin-right: .5em;
 
     &:hover {
         text-decoration: none;
+    }
+}
+
+.phone-button {
+    font-weight: bold;
+    border-radius: 15px;
+    border-color: $base-font-colour;
+    border-width: thin;
+    padding: .75em;
+    padding-bottom: .15em;
+    background-color: lightblue;
+
+    &:hover {
+        background-color: blue;
+    }
+
+    &:active {
+        background-color: grey;
     }
 }
