@@ -21,11 +21,26 @@
     }
 }
 
+div {
+    ul {
+        li {
+            margin-bottom: 1em;
+            svg {
+                margin-right: .5em;
+            }
+        }
+    }
+}
+
 .footer-info {
     padding: 1em;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+}
+
+.footer-icons {
+    color: #ddd;
 }
 
 .copyright {
@@ -34,4 +49,8 @@
     text-align: center;
     font-size: 12px;
     font-weight: 200;
+}
+
+.info-space {
+    margin-top: 2em;
 }
