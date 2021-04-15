@@ -17,10 +17,23 @@ and (-webkit-min-device-pixel-ratio: 2) {
 
 .logo {
     margin-right: 2em;
+
+    &:hover {
+        text-decoration: none;
+    }
 }
 
 .pageLinks {
     color: $base-font-colour;
+
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+.phoneIcon {
+    margin-left: .2em;
+    margin-right: .5em;
 
     &:hover {
         text-decoration: none;
