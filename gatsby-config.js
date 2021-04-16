@@ -1,9 +1,12 @@
 module.exports = {
   siteMetadata: {
-    title: 'E & M Acoustic',
+    title: 'R.C Acoustics',
     author: 'Edgar J San Martin'
   },
   plugins: [
-    'gatsby-plugin-sass'
+    'gatsby-plugin-sass',
+    'gatsby-plugin-image',
+    'gatsby-plugin-sharp',
+    'gatsby-transformer-sharp',
   ],
 }

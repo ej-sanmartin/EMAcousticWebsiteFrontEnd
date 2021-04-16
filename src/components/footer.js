@@ -29,7 +29,7 @@ const Footer = () => {
                         <h4>Contact Info</h4>
                         <ul className={`${footerStyles.infoSpace}`}>
                             <IconContext.Provider value={{ size: '1.5em', title: 'Address: 79 Mill Brook Rd, East Hartford, CT, 06118' }}>
-                                <li><AiOutlineHome />79 Mill Brook Rd, East Hartford, CT 06118</li>
+                                <li><AiOutlineHome />101 Main St., East Hartford, CT 06118</li>
                             </IconContext.Provider>
                             <IconContext.Provider value={{ size: '1.5em', title: 'Phone Number: 860 5433160' }}>
                                 <li><HiOutlinePhone /> 860 - 543 - 3160</li> 
