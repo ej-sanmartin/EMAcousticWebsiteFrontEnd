@@ -35,7 +35,7 @@ const Footer = () => {
                                 <li><HiOutlinePhone /> 860 - 543 - 3160</li> 
                             </IconContext.Provider>
                             <IconContext.Provider value={{ size: '1.5em', title: 'Email' }}>
-                                <li><HiOutlineMail /></li>
+                                <li><HiOutlineMail />contact@rc_acoustics.com</li>
                             </IconContext.Provider>
                         </ul>
                     </Col>
