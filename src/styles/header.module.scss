@@ -15,6 +15,18 @@ and (-webkit-min-device-pixel-ratio: 2) {
     }
 }
 
+.navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 100%;
+}
+
+.navbar-layout {
+    display: block;
+}
+
 .logo {
     max-height: 150px;
     max-width: 150px;

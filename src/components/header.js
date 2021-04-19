@@ -12,9 +12,9 @@ import * as headerStyles from '../styles/header.module.scss';
 
 const Header = () => {
     return (
-        <header>
+        <header className={headerStyles.navbar}>
             <Navbar collapseOnSelect expand="sm">
-                <Container>
+                <Container className={headerStyles.navbarLayout}>
                     <Navbar.Brand>
                         <Link to="/">
                             <StaticImage
