@@ -23,21 +23,11 @@ body, html {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    width: 100vw;
 }
 
 .website-real-estate {
     flex-grow: 1;
-}
-
-.nav-bar-over-opening-image {
-    @include mixins.absolute-out-of-flow-layout;
-    z-index: 100;
-}
-
-.opening-image-on-page {
-    @include mixins.absolute-out-of-flow-layout;
-    z-index: -10;
-    overflow: hidden;
 }
 
 h4 {

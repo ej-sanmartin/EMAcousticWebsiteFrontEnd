@@ -1,0 +1,28 @@
+@import 'mixins';
+@import './variables';
+
+.opening-image {
+    position: absolute;
+    z-index: -10;
+    object-fit: cover;
+    height: 100vh;
+}
+
+.opening-message-container {
+    position: relative;
+    left: 0;
+    top: 0;
+    min-width: 100vw;
+    min-height: 100vh;
+    z-index: 10;
+    display: grid;
+    place-items: center;
+}
+
+.first-opening-phrase {
+    @include attention-text-large;
+}
+
+.second-opening-phrase {
+    @include attention-text-large;
+}
