@@ -9,7 +9,14 @@
     color: variables.$base-font-colour;
     margin: 0;
     padding: 0;
-    overflow: hidden;
+}
+
+body, html {
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    overscroll-behavior: contain;
+    position: fixed;
 }
 
 .layout-content-order {

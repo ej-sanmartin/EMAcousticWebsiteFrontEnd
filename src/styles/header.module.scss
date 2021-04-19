@@ -39,12 +39,13 @@ and (-webkit-min-device-pixel-ratio: 2) {
 }
 
 .page-links {
-    color: $base-font-colour;
+    color: $lighter-font-colour;
     margin-left: .5em;
     margin-right: .5em;
 
     &:hover {
         text-decoration: none;
+        color: $light-font-colour;
     }
 }
 
