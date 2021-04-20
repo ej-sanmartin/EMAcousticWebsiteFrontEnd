@@ -6,6 +6,7 @@
     z-index: -10;
     object-fit: cover;
     height: 100vh;
+    filter: brightness(75%);
 }
 
 .opening-message-container {
@@ -15,14 +16,54 @@
     min-width: 100vw;
     min-height: 100vh;
     z-index: 10;
-    display: grid;
-    place-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 .first-opening-phrase {
     @include attention-text-large;
+    animation-name: fade-in-from-left;
+    animation-duration: 1000ms;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-out;
+    margin-left: -35%;
+    max-width: 20ch;
+    text-align: right;
 }
 
 .second-opening-phrase {
     @include attention-text-large;
+    animation-name: fade-in-from-right;
+    animation-duration: 1000ms;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-out;
+    margin-right: -30%;
+    max-width: 20ch;
+    text-align: left;
+}
+
+@keyframes fade-in-from-left {
+    0% {
+        opacity: 0;
+        margin-left: -75%;
+    }
+
+    100% {
+        opacity: 1;
+        margin-left: -35%;
+    }
+}
+
+@keyframes fade-in-from-right {
+    0% {
+        opacity: 0;
+        margin-right: -75%;
+    }
+
+    100% {
+        opacity: 1;
+        margin-right: -30%;
+    }
 }
