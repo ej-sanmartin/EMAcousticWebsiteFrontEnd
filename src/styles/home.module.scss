@@ -1,6 +1,28 @@
 @import 'mixins';
 @import './variables';
 
+@media only screen and (max-width: 600px) {
+    h1, h2, h3, h4, h5, p {
+        padding: 1em;
+    }
+
+    .first-opening-phrase,
+    .second-opening-phrase {
+        font-size: 24px !important;
+        animation-name: fade-in !important;
+        animation-fill-mode: forwards;
+        text-align: center !important;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+
+}
+
+h1, h2, h3, h4, h5, p {
+    max-width: 60ch;
+}
+
 .opening-image {
     position: absolute;
     z-index: -10;
@@ -22,13 +44,27 @@
     flex-direction: column;
 }
 
+.opening-message-container::after {
+    position: absolute;
+    content: '';
+    width: 110%;
+    height: 50px;
+    background: white;
+    bottom: -4.5%;
+    transform: rotate(-1.5deg);
+}
+
+.content-container {
+    height: 100vh;
+}
+
 .first-opening-phrase {
     @include attention-text-large;
     animation-name: fade-in-from-left;
-    animation-duration: 1000ms;
+    animation-duration: 900ms;
     animation-iteration-count: 1;
     animation-timing-function: ease-out;
-    margin-left: -35%;
+    animation-fill-mode: forwards;
     max-width: 20ch;
     text-align: right;
 }
@@ -36,10 +72,12 @@
 .second-opening-phrase {
     @include attention-text-large;
     animation-name: fade-in-from-right;
-    animation-duration: 1000ms;
+    animation-duration: 900ms;
     animation-iteration-count: 1;
     animation-timing-function: ease-out;
-    margin-right: -30%;
+    animation-fill-mode: forwards;
+    animation-delay: 1000ms;
+    opacity: 0;
     max-width: 20ch;
     text-align: left;
 }
@@ -65,5 +103,15 @@
     100% {
         opacity: 1;
         margin-right: -30%;
+    }
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
     }
 }

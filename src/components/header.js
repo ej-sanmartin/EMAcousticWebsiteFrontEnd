@@ -51,7 +51,7 @@ const Header = () => {
                             <Nav.Item>
                                 <Nav.Link className={headerStyles.phoneButton}>
                                     <div  style={{ marginTop: "-.75em", marginBottom: "-1em" }}>
-                                        <a className={headerStyles.pageLinks} href="tel:860-543-3160"><p>CALL NOW <FaPhoneAlt className={headerStyles.phoneIcon} />860-543-3160</p></a>
+                                        <a className={headerStyles.pageLinks} href="tel:860-8888-1111"><p>CALL NOW <FaPhoneAlt className={headerStyles.phoneIcon} />860-888-1111</p></a>
                                     </div>
                                 </Nav.Link>
                             </Nav.Item>

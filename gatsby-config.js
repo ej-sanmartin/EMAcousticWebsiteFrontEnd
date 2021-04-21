@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: 'R.C Acoustics',
+    title: 'R.C. Acoustics',
     author: 'Edgar J San Martin'
   },
   plugins: [

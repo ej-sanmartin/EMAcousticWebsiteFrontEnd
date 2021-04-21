@@ -21,7 +21,7 @@ const Footer = () => {
             <Container>
                 <Row className={footerStyles.footerInfo}>
                     <Col sm={4}>
-                        <h4>E & M Acoustic LLC</h4>
+                        <h4>R.C. Acousticals</h4>
                         <p className={`${footerStyles.infoSpace}`}>{footerCompanySummary}</p>
                     </Col>
                     <Col sm={4}></Col>
@@ -31,8 +31,8 @@ const Footer = () => {
                             <IconContext.Provider value={{ size: '1.5em', title: 'Address: 79 Mill Brook Rd, East Hartford, CT, 06118' }}>
                                 <li><AiOutlineHome />101 Main St., East Hartford, CT 06118</li>
                             </IconContext.Provider>
-                            <IconContext.Provider value={{ size: '1.5em', title: 'Phone Number: 860 5433160' }}>
-                                <li><HiOutlinePhone /> 860 - 543 - 3160</li> 
+                            <IconContext.Provider value={{ size: '1.5em', title: 'Phone Number: 860 888 1111' }}>
+                                <li><HiOutlinePhone /> 860 - 888 - 1111</li> 
                             </IconContext.Provider>
                             <IconContext.Provider value={{ size: '1.5em', title: 'Email' }}>
                                 <li><HiOutlineMail />contact@rc_acoustics.com</li>
@@ -41,7 +41,7 @@ const Footer = () => {
                     </Col>
                 </Row>
                 <div>
-                    <p className={footerStyles.copyright}>Copyright © E&M Acoustic LLC {year}. All Rights Reserved</p>  
+                    <p className={footerStyles.copyright}>Copyright © R.C. Acousticals {year}. All Rights Reserved</p>  
                 </div>
             </Container>
         </footer>

@@ -20,6 +20,17 @@
             color: #ddd;
         }
     }
+
+    &::before {
+        content: '';
+        position: absolute;
+        width: 120vw;
+        height: 40px;
+        background: white;
+        transform: rotate(-1deg);
+        z-index: 10;
+        margin-top: -3.5%;
+    }
 }
 
 div {
