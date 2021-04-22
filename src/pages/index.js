@@ -34,8 +34,20 @@ const Home = () => {
       <div className={homeStyles.contentContainer}>
         <p>Portfolio</p>
       </div>
+      <div className={homeStyles.headingContainer}>
+        <h3 className={homeStyles.heading}>Where To Find Us</h3>
+        <hr className={homeStyles.decorativeLine} />
+      </div>
       <div className={homeStyles.contentContainer}>
-        <p>Map</p>
+        <iframe 
+          src={`https://www.google.com/maps/embed/v1/place?key=${process.env.GOOGLE_MAPS_EMBED_API_TOKEN}&q=${process.env.GOOGLE_MAPS_PLACE_ID}&center=41.73408,-72.62559&zoom=18`}
+          title='Google Maps Location'
+          width='1000'
+          height='600'
+          loading="lazy"
+          allowfullscreen
+          className={homeStyles.map}>
+        </iframe>
       </div>
     </Layout>
   );

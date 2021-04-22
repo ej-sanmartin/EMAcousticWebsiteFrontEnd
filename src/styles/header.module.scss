@@ -60,12 +60,12 @@ and (-webkit-min-device-pixel-ratio: 2) {
 
 .phone-button {
     max-width: 250px;
-    max-height: 6077v666px;
+    max-height: 150px;
     font-weight: bold;
     border-radius: 25px;
     border-color: $base-font-colour;
     border-width: thin;
-    padding: .2em;
+    padding: .1em;
     background-color: lightblue;
 
     &:hover {

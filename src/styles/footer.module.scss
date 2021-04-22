@@ -1,5 +1,10 @@
+footer {
+    z-index: 10;
+    clip-path: polygon(0 8%, 100% 0, 100% 100%, 0% 100%);
+}
+
 .container {
-    padding-top: 1.5em;
+    padding-top: 2em;
     border-top: .1em #ddd;
     background: #052517;
 
@@ -22,11 +27,12 @@
     }
 
     &::before {
+        display: none;
         content: '';
         position: absolute;
         width: 120vw;
         height: 40px;
-        background: white;
+        background: red;
         transform: rotate(-1deg);
         z-index: 10;
         margin-top: -3.5%;
