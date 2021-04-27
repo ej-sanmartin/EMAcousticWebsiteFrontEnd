@@ -42,10 +42,51 @@ and (-webkit-min-device-pixel-ratio: 2) {
     color: $lighter-font-colour;
     margin-left: .5em;
     margin-right: .5em;
+    text-decoration: none;
+    position: relative;
+    padding-bottom: 8px;
 
-    &:hover {
+    &::before,
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: 4px;
+        left: 0;
+        right: 0;
+        height: 2px;
+        background-color: $lighter-font-colour;    
+    }
+
+    &::before {
+        opacity: 0;
+        transform: translateY(- $distance);
+        transition: transform 0ms $easeOutBack, opacity 0s;
+    }
+
+    &::after {
+        opacity: 0;
+        transform: translateY($distance / 2);
+        transition: transform $duration $easeOutBack, opacity $duration;
+    }
+
+    &:hover,
+    &:focus {
         text-decoration: none;
-        color: $light-font-colour;
+        color: $lighter-font-colour;
+        
+        &::before,
+        &::after {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        &::before {
+            transition: transform $duration $easeOutBack, opacity $duration;
+        }
+
+        &::after {
+            transition: transform 0ms $duration $easeOutBack, opacity 0ms $duration;
+        }
     }
 }
 
@@ -55,24 +96,5 @@ and (-webkit-min-device-pixel-ratio: 2) {
 
     &:hover {
         text-decoration: none;
-    }
-}
-
-.phone-button {
-    max-width: 250px;
-    max-height: 150px;
-    font-weight: bold;
-    border-radius: 25px;
-    border-color: $base-font-colour;
-    border-width: thin;
-    padding: .1em;
-    background-color: lightblue;
-
-    &:hover {
-        background-color: blue;
-    }
-
-    &:active {
-        background-color: grey;
     }
 }

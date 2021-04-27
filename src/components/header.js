@@ -48,11 +48,9 @@ const Header = () => {
                                     <Link className={headerStyles.pageLinks} to="/contact">Contact</Link>
                                 </Nav.Link>
                             </Nav.Item>
-                            <Nav.Item>
-                                <Nav.Link className={headerStyles.phoneButton}>
-                                    <div  style={{ marginTop: "-.75em", marginBottom: "-1.5em" }}>
-                                        <a className={headerStyles.pageLinks} href="tel:860-8888-1111"><p>CALL NOW <FaPhoneAlt className={headerStyles.phoneIcon} />860-888-1111</p></a>
-                                    </div>
+                            <Nav.Item as="li">
+                                <Nav.Link>
+                                    <Link className={headerStyles.pageLinks} href="tel:860-8888-1111">CALL NOW <FaPhoneAlt className={headerStyles.phoneIcon} />860-888-1111</Link>
                                 </Nav.Link>
                             </Nav.Item>
                         </Nav>

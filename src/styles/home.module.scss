@@ -35,8 +35,8 @@ h1, h2, h3, h4, h5, p {
     position: relative;
     left: 0;
     top: 0;
-    min-width: 100vw;
-    min-height: 100vh;
+    width: 100vw;
+    height: 100vh;
     z-index: 10;
     display: flex;
     justify-content: center;
@@ -55,11 +55,18 @@ h1, h2, h3, h4, h5, p {
 }
 
 .content-container {
-    height: 100vh;
+    min-height: 100vh;
+}
+
+.blurb-layout {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 6rem;
 }
 
 .heading-container {
-    height: 30vh;
+    min-height: 30vh;
     background-color: $light-background-colour;
     display: flex;
     justify-content: center;
@@ -68,7 +75,7 @@ h1, h2, h3, h4, h5, p {
     z-index: 1;
 }
 
-hr.decorative-line {
+.decorative-line {
     z-index: 2;
     border: 0;
     height: 1px;
@@ -84,6 +91,7 @@ hr.decorative-line {
     animation-fill-mode: forwards;
     max-width: 20ch;
     text-align: right;
+    letter-spacing: .2rem;
 }
 
 .second-opening-phrase {
@@ -97,6 +105,7 @@ hr.decorative-line {
     opacity: 0;
     max-width: 20ch;
     text-align: left;
+    letter-spacing: .2rem;
 }
 
 .heading {
@@ -105,11 +114,39 @@ hr.decorative-line {
     padding: 2rem;
 }
 
+.sub-heading-text-styles {
+    text-align: center;
+
+    h3 {
+        color: $font-highlight-colour;
+        font-weight: bold;
+    }
+
+    h4 {
+        letter-spacing: .4rem;
+    }
+
+    hr {
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+}
+
+div {
+    div:nth-child(3) {
+        p.motto {
+           text-align: center;
+           margin: 2rem;
+        }
+        
+    }
+}
+
 .map {
     position: relative;
-    top: 39%;
+    margin-bottom: -50%;
     width: 100vw;
-    height: 65vh;
+    min-height: 50vh;
     justify-self: center;
     z-index: -5;
     border: 0;
