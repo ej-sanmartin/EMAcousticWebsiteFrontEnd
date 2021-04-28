@@ -15,5 +15,14 @@ module.exports = {
         accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
       },
     },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `R.C. Acoustics`,
+        short_name: `R.C. Acoustics`,
+        start_url: `/`,
+        icon: `src/assets/images/rcLogoFavicon.png`
+      },
+    },
   ],
 }

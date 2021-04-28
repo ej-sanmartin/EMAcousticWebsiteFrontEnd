@@ -63,6 +63,12 @@ div {
     color: #ddd;
 }
 
+.copyright-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .copyright {
     padding: 1em;
     width: 100%;

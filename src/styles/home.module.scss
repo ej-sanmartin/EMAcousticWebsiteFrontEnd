@@ -31,6 +31,10 @@ h1, h2, h3, h4, h5, p {
     filter: brightness(75%);
 }
 
+.parallax {
+    background-attachment: fixed;
+}
+
 .opening-message-container {
     position: relative;
     left: 0;
@@ -74,7 +78,35 @@ h1, h2, h3, h4, h5, p {
 }
 
 .service-cards-layout {
-    @include four-item-columned-grid;
+    @include responsive-grid(350px);
+    justify-items: center;
+    margin: auto 5em;
+    row-gap: 1em;
+    margin-top: 2em;
+}
+
+.service-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    min-height: 40vh;
+
+    h5 {
+        text-align: center;
+    }
+
+    p {
+        max-width: 40ch;
+        text-align: center;
+    }
+}
+
+.service-card-image {
+    float: left;
+    height: 175px;
+    width: 175px;
+    object-fit: cover;
 }
 
 .portfolio-heading-container {
@@ -105,16 +137,23 @@ h1, h2, h3, h4, h5, p {
 }
 
 .portfolio-gallery {
-    @include four-item-columned-grid;
+    @include responsive-grid(320px);
 }
 
 .portfolio-item {
-    background-color: red;
+    position: relative;
+    width: 320px;
+}
+
+.portfolio-item-image {
+    display: block;
+    width: 100%;
 }
 
 // below is just to test out grid layout for portfolio
 .portfolio-item-two {
     background-color: blue;
+    min-height: 50vh;
 }
 
 .heading-container {

@@ -27,8 +27,8 @@
     margin-top: 1em;
 }
 
-@mixin four-item-columned-grid {
+@mixin responsive-grid($item-width) {
     display: grid;
     align-items: center;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax($item-width, 1fr));
 }

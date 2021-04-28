@@ -34,9 +34,28 @@ const Home = () => {
       <div className={homeStyles.servicesContainer}>
         <div className={homeStyles.serviceCardsLayout}>
           <div className={homeStyles.serviceCard}>
-            <StaticImage />
-            <h5>Name</h5>
-            <p>Description</p>
+            <StaticImage
+              src="../assets/images/ceiling.png"
+              className={homeStyles.serviceCardImage}
+            />
+            <h5>Service</h5>
+            <p>What we do is provide this service with the highest quality imaginable</p>
+          </div>
+          <div className={homeStyles.serviceCard}>
+            <StaticImage
+              src="../assets/images/con-screws.png"
+              className={homeStyles.serviceCardImage}
+            />
+            <h5>Service</h5>
+            <p>What we do is provide this service with the highest quality imaginable</p>
+          </div>
+          <div className={homeStyles.serviceCard}>
+            <StaticImage
+              src="../assets/images/con-retractable-knife.png"
+              className={homeStyles.serviceCardImage}
+            />
+            <h5>Service</h5>
+            <p>What we do is provide this service with the highest quality imaginable</p>
           </div>
         </div>
       </div>
@@ -48,24 +67,27 @@ const Home = () => {
         </div>
       </div>
       <div className={homeStyles.portfolioGallery}>
-        <div className={homeStyles.portfolioItem}>
-          <p>Item 1</p>
-        </div>
-        <div className={homeStyles.portfolioItemTwo}>
+        <a className={homeStyles.portfolioItem}>
+          <StaticImage
+            src="../assets/images/concert_hall_job.jpg"
+            className={homeStyles.portfolioItemImage}
+            alt="Concert Hall Image"
+          />
+          <div className={homeStyles.portfolioItemImageOverlay}>
+            <h4 className={homeStyles.portfolioItemTitle}>Concert Hall</h4>
+            <p className={homeStyles.portfolioItemLocation}>Hartford, CT</p>
+          </div>
+          
+        </a>
+        <a className={homeStyles.portfolioItemTwo}>
           <p>Item 2</p>
-        </div>
-        <div className={homeStyles.portfolioItem}>
+        </a>
+        <a className={homeStyles.portfolioItem}>
           <p>Item 1</p>
-        </div>
-        <div className={homeStyles.portfolioItemTwo}>
+        </a>
+        <a className={homeStyles.portfolioItemTwo}>
           <p>Item 2</p>
-        </div>
-        <div className={homeStyles.portfolioItem}>
-          <p>Item 1</p>
-        </div>
-        <div className={homeStyles.portfolioItemTwo}>
-          <p>Item 2</p>
-        </div>
+        </a>
       </div>
       <div className={homeStyles.headingContainer}>
         <h3 className={homeStyles.heading}>Where To Find Us</h3>
