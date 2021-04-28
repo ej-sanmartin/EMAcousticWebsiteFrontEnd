@@ -18,7 +18,7 @@ const Home = () => {
         <h2 className={homeStyles.firstOpeningPhrase}>Over 20 years of excellence</h2>
         <h2 className={homeStyles.secondOpeningPhrase}>We take pride in our impact</h2>
       </div>
-      <div className={`${homeStyles.contentContainer} ${homeStyles.blurbLayout}`}>
+      <div className={`${homeStyles.aboutContainer} ${homeStyles.blurbLayout}`}>
         <div className={homeStyles.subHeadingTextStyles}>
           <h4>WE ARE HERE TO SERVE</h4>
           <h3>Acoustical Ceiling, Hardware, and General Carpentry Services</h3>
@@ -31,15 +31,39 @@ const Home = () => {
           <p className={homeStyles.motto}>R.C. Acousticals ensures that you are getting the highest quality product, service, and professionalism.</p>
         </div>
       </div>
-      <div className={homeStyles.contentContainer}>
-        <p>Services</p>
-        <div className={homeStyles.serviceCard}>
-          <h5>Name</h5>
-          <p>Description</p>
+      <div className={homeStyles.servicesContainer}>
+        <div>
+          <h3>Services</h3>
+        </div>
+        <div className={homeStyles.serviceCardsLayout}>
+          <div className={homeStyles.serviceCard}>
+            <h5>Name</h5>
+           <p>Description</p>
+          </div>
         </div>
       </div>
-      <div className={homeStyles.contentContainer}>
+      <div className={homeStyles.portfolioHeadingContainer}>
         <p>Portfolio</p>
+      </div>
+      <div className={homeStyles.portfolioGallery}>
+        <div className={homeStyles.portfolioItem}>
+          <p>Item 1</p>
+        </div>
+        <div className={homeStyles.portfolioItemTwo}>
+          <p>Item 2</p>
+        </div>
+        <div className={homeStyles.portfolioItem}>
+          <p>Item 1</p>
+        </div>
+        <div className={homeStyles.portfolioItemTwo}>
+          <p>Item 2</p>
+        </div>
+        <div className={homeStyles.portfolioItem}>
+          <p>Item 1</p>
+        </div>
+        <div className={homeStyles.portfolioItemTwo}>
+          <p>Item 2</p>
+        </div>
       </div>
       <div className={homeStyles.headingContainer}>
         <h3 className={homeStyles.heading}>Where To Find Us</h3>

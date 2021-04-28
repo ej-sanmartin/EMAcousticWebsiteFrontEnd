@@ -58,6 +58,10 @@ h1, h2, h3, h4, h5, p {
     min-height: 100vh;
 }
 
+.about-container {
+    min-height: 50vh;
+}
+
 .blurb-layout {
     display: flex;
     flex-direction: column;
@@ -65,8 +69,32 @@ h1, h2, h3, h4, h5, p {
     margin-top: 6rem;
 }
 
+.services-container {
+    min-height: 75vh;
+}
+
+.service-cards-layout {
+    @include four-item-columned-grid;
+}
+
+.portfolio-heading-container {
+    min-height: 25vh;
+}
+
+.portfolio-gallery {
+    @include four-item-columned-grid;
+}
+
+.portfolio-item {
+    background-color: red;
+}
+
+.portfolio-item-two {
+    background-color: blue;
+}
+
 .heading-container {
-    min-height: 30vh;
+    min-height: 25vh;
     background-color: $light-background-colour;
     display: flex;
     justify-content: center;
