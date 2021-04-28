@@ -32,18 +32,20 @@ const Home = () => {
         </div>
       </div>
       <div className={homeStyles.servicesContainer}>
-        <div>
-          <h3>Services</h3>
-        </div>
         <div className={homeStyles.serviceCardsLayout}>
           <div className={homeStyles.serviceCard}>
+            <StaticImage />
             <h5>Name</h5>
-           <p>Description</p>
+            <p>Description</p>
           </div>
         </div>
       </div>
       <div className={homeStyles.portfolioHeadingContainer}>
-        <p>Portfolio</p>
+        <div>
+          <h3>Portfolio</h3>
+          <hr />
+          <p>Recent Works</p> 
+        </div>
       </div>
       <div className={homeStyles.portfolioGallery}>
         <div className={homeStyles.portfolioItem}>

@@ -78,7 +78,30 @@ h1, h2, h3, h4, h5, p {
 }
 
 .portfolio-heading-container {
+    @include center-in-div;
     min-height: 25vh;
+    padding-top: .5rem;
+    padding-bottom: .5rem;;
+    background-color: #ddd;
+
+    div {
+        display: flex;
+        flex-direction: column;
+        text-transform: uppercase;
+        text-align: center;
+
+        h3 {
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: -.1rem;
+            letter-spacing: .075rem;
+        }
+        
+        p {
+            margin-top: -.1rem;
+            letter-spacing: .2rem;
+        }
+    }
 }
 
 .portfolio-gallery {
@@ -89,18 +112,16 @@ h1, h2, h3, h4, h5, p {
     background-color: red;
 }
 
+// below is just to test out grid layout for portfolio
 .portfolio-item-two {
     background-color: blue;
 }
 
 .heading-container {
+    @include center-in-div;
     min-height: 25vh;
     background-color: $light-background-colour;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     margin-bottom: -20%;
-    z-index: 1;
 }
 
 .decorative-line {

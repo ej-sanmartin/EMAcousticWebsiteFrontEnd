@@ -5,6 +5,13 @@
     text-align: center;
 }
 
+@mixin center-in-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
 @mixin absolute-out-of-flow-layout {
     position: absolute;
     top: 0;
