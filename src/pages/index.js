@@ -59,7 +59,7 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <div className={homeStyles.portfolioHeadingContainer}>
+      <div id="portfolio" className={homeStyles.portfolioHeadingContainer}>
         <div>
           <h3>Portfolio</h3>
           <hr />
@@ -89,7 +89,7 @@ const Home = () => {
           <p>Item 2</p>
         </a>
       </div>
-      <div className={homeStyles.headingContainer}>
+      <div id="contact" className={homeStyles.headingContainer}>
         <h3 className={homeStyles.heading}>Where To Find Us</h3>
       </div>
       <div className={homeStyles.contentContainer}>
