@@ -40,13 +40,7 @@ const Footer = () => {
                         </ul>
                     </Col>
                 </Row>
-                <div
-                    style={{
-                        display:"flex",
-                        justifyContent:"center",
-                        alignItems:"center"
-                    }}
-                >
+                <div className={footerStyles.copyrightContainer}>
                     <p className={footerStyles.copyright}>Copyright © R.C. Acousticals {year}. All Rights Reserved</p>  
                 </div>
             </Container>

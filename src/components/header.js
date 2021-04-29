@@ -35,7 +35,7 @@ const Header = () => {
                             </Nav.Item>
                             <Nav.Item as="li">
                                 <Nav.Link>
-                                   <Link className={headerStyles.pageLinks} to="/about">About</Link> 
+                                   <Link className={headerStyles.pageLinks} to="/#about">About</Link> 
                                 </Nav.Link>
                             </Nav.Item>
                             <Nav.Item as="li">

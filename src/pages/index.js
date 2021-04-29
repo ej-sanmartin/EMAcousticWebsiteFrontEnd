@@ -18,7 +18,7 @@ const Home = () => {
         <h2 className={homeStyles.firstOpeningPhrase}>Over 20 years of excellence</h2>
         <h2 className={homeStyles.secondOpeningPhrase}>We take pride in our impact</h2>
       </div>
-      <div className={`${homeStyles.aboutContainer} ${homeStyles.blurbLayout}`}>
+      <div id="about" className={`${homeStyles.aboutContainer} ${homeStyles.blurbLayout}`}>
         <div className={homeStyles.subHeadingTextStyles}>
           <h4>WE ARE HERE TO SERVE</h4>
           <h3>Acoustical Ceiling, Hardware, and General Carpentry Services</h3>
@@ -38,7 +38,7 @@ const Home = () => {
               src="../assets/images/ceiling.png"
               className={homeStyles.serviceCardImage}
             />
-            <h5>Service</h5>
+            <h5>Acoustical Ceiling</h5>
             <p>What we do is provide this service with the highest quality imaginable</p>
           </div>
           <div className={homeStyles.serviceCard}>
@@ -46,7 +46,7 @@ const Home = () => {
               src="../assets/images/con-screws.png"
               className={homeStyles.serviceCardImage}
             />
-            <h5>Service</h5>
+            <h5>Hardware</h5>
             <p>What we do is provide this service with the highest quality imaginable</p>
           </div>
           <div className={homeStyles.serviceCard}>
@@ -54,7 +54,7 @@ const Home = () => {
               src="../assets/images/con-retractable-knife.png"
               className={homeStyles.serviceCardImage}
             />
-            <h5>Service</h5>
+            <h5>General Carpentry</h5>
             <p>What we do is provide this service with the highest quality imaginable</p>
           </div>
         </div>
