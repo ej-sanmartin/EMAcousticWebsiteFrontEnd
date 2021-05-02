@@ -1,5 +1,4 @@
 import React from 'react';
-// import 'bootstrap/dist/css/bootstrap.min.css'; just in case
 
 import Header from './header';
 import Footer from './footer';

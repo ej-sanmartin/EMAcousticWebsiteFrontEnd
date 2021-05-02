@@ -1,4 +1,6 @@
 import React from "react";
+import { graphql, useStaticQuery, Link } from 'gatsby';
+import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 
 import Layout from '../components/layout';
 
@@ -7,6 +9,28 @@ import { StaticImage } from 'gatsby-plugin-image';
 import * as homeStyles from '../styles/home.module.scss';
 
 const Home = () => {
+  const data = useStaticQuery(graphql`
+    query {
+      allContentfulPortfolioProfile ( sort: { fields: projectData, order: DESC } ) {
+        edges {
+          node {
+            projectName
+            location
+            slug
+            projectHeaderPhoto {
+              gatsbyImageData(
+                width: 400
+                placeholder: BLURRED
+                formats: [AUTO, PNG, WEBP]
+              )
+              title
+          }
+          }
+        }
+      }
+    }
+  `);
+
   return (
     <Layout>
       <StaticImage
@@ -33,6 +57,8 @@ const Home = () => {
       </div>
       <div className={homeStyles.servicesContainer}>
         <div className={homeStyles.serviceCardsLayout}>
+
+          {/* serviceCard will be its own component that an array of service objects will map to */}
           <div className={homeStyles.serviceCard}>
             <StaticImage
               src="../assets/images/ceiling.png"
@@ -41,6 +67,7 @@ const Home = () => {
             <h5>Acoustical Ceiling</h5>
             <p>What we do is provide this service with the highest quality imaginable</p>
           </div>
+
           <div className={homeStyles.serviceCard}>
             <StaticImage
               src="../assets/images/con-screws.png"
@@ -67,18 +94,27 @@ const Home = () => {
         </div>
       </div>
       <div className={homeStyles.portfolioGallery}>
-        <a className={homeStyles.portfolioItem}>
-          <StaticImage
-            src="../assets/images/concert_hall_job.jpg"
-            className={homeStyles.portfolioItemImage}
-            alt="Concert Hall Image"
-          />
-          <div className={homeStyles.portfolioItemImageOverlay}>
-            <h4 className={homeStyles.portfolioItemTitle}>Concert Hall</h4>
-            <p className={homeStyles.portfolioItemLocation}>Hartford, CT</p>
-          </div>
-          
-        </a>
+
+      {/* below will be a portfolioItem Card component */}
+      {data.allContentfulPortfolioProfile.edges.map((edge) => {
+        let image = getImage(edge.node.projectHeaderPhoto.gatsbyImageData);
+
+        return (
+          <Link className={homeStyles.portfolioItem} to={`/portfolio/${edge.node.slug}`}>
+            <GatsbyImage
+              image={image}
+              className={homeStyles.portfolioItemImage}
+              alt={edge.node.projectHeaderPhoto.title}
+            />
+            <div className={homeStyles.portfolioItemImageOverlay}>
+              <h4 className={homeStyles.portfolioItemTitle}>{edge.node.projectName}</h4>
+              <p className={homeStyles.portfolioItemLocation}>{edge.node.location}</p>
+            </div>
+          </Link>
+        );
+      })}
+
+
         <a className={homeStyles.portfolioItemTwo}>
           <p>Item 2</p>
         </a>

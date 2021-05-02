@@ -64,13 +64,14 @@ h1, h2, h3, h4, h5, p {
 
 .about-container {
     min-height: 50vh;
+    padding-top: 2em;
 }
 
 .blurb-layout {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 6rem;
+    margin-top: 4rem;
 }
 
 .services-container {

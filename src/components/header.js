@@ -22,7 +22,6 @@ const Header = () => {
                                 src='../assets/images/rcLogo.png'
                                 alt='R.C Logo'
                                 className={headerStyles.logo}
-
                             />
                         </Link>        
                     </Navbar.Brand>
