@@ -1,7 +1,7 @@
 @import 'mixins';
 @import './variables';
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 1100px) {
     h1, h2, h3, h4, h5, p {
         padding: 1em;
     }
@@ -12,6 +12,15 @@
         animation-name: fade-in !important;
         animation-fill-mode: forwards;
         text-align: center !important;
+    }
+
+    .service-cards-layout {
+        display: flex !important;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: auto 2em;
+        margin-top: -10em !important;
+        margin-bottom: 2em !important;
     }
 }
 
@@ -32,7 +41,19 @@ h1, h2, h3, h4, h5, p {
 }
 
 .parallax {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: url('../assets/images/work_makes_better_futures.jpg');
+    background-size: 100% 100%;
     background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: brightness(75%);
 }
 
 .opening-message-container {
@@ -139,7 +160,8 @@ h1, h2, h3, h4, h5, p {
 }
 
 .portfolio-gallery {
-    @include responsive-grid(400px);
+    @include responsive-grid(420px);
+    grid-auto-rows: 1fr;
 }
 
 .portfolio-item {
@@ -189,19 +211,13 @@ h1, h2, h3, h4, h5, p {
 }
 
 .portfolio-item-title {
-    font-size: 2em;
+    font-size: 1.5em;
     font-weight: bold;
 }
 
 .portfolio-item-location {
-    font-size: 1.25em;
+    font-size: 1em;
     margin-top: .25em;
-}
-
-// below is just to test out grid layout for portfolio
-.portfolio-item-two {
-    background-color: blue;
-    min-height: 50vh;
 }
 
 .heading-container {

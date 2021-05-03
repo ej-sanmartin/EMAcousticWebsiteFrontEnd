@@ -28,6 +28,11 @@ const Header = () => {
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className="justify-content-end" style={{ width: "100%" }}>
+                            <Nav.Item as="button">
+                                <Nav.Link>
+                                   <Link className={headerStyles.pageLinks} to="/">Home</Link> 
+                                </Nav.Link>
+                            </Nav.Item>
                             <Nav.Item as="button" onClick={() => scrollTo('#about')}>
                                 <Nav.Link>
                                    <Link className={headerStyles.pageLinks}>About</Link> 

@@ -33,11 +33,7 @@ const Home = () => {
 
   return (
     <Layout>
-      <StaticImage
-        src='../assets/images/work_makes_better_futures.jpg'
-        alt='Dramatic Construction Worker'
-        className={homeStyles.openingImage}
-      />
+      <div className={`${homeStyles.openingImage} ${homeStyles.parallax}`}></div>
       <div className={homeStyles.openingMessageContainer}>
         <h2 className={homeStyles.firstOpeningPhrase}>Over 20 years of excellence</h2>
         <h2 className={homeStyles.secondOpeningPhrase}>We take pride in our impact</h2>
@@ -113,17 +109,6 @@ const Home = () => {
           </Link>
         );
       })}
-
-
-        <a className={homeStyles.portfolioItemTwo}>
-          <p>Item 2</p>
-        </a>
-        <a className={homeStyles.portfolioItem}>
-          <p>Item 1</p>
-        </a>
-        <a className={homeStyles.portfolioItemTwo}>
-          <p>Item 2</p>
-        </a>
       </div>
       <div id="contact" className={homeStyles.headingContainer}>
         <h3 className={homeStyles.heading}>Where To Find Us</h3>
