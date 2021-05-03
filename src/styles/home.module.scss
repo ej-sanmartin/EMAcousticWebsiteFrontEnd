@@ -16,18 +16,26 @@
     }
 
     .service-cards-layout {
-        display: flex !important;
-        flex-wrap: wrap;
-        justify-content: center;
+        @include responsive-flex-box;
         margin: auto 2em;
         margin-top: -10em !important;
         margin-bottom: 2em !important;
     }
+
+    .portfolio-gallery {
+        @include responsive-flex-box;
+    }
+
+    .portfolio-item {
+        flex-basis: 50%;
+    }
 }
 
 /* For mobile phones */
-@media only screen and (min-width: 600px) {
-
+@media only screen and (max-width: 600px) {
+    .portfolio-item {
+        flex-basis: 100% !important;
+    }
 }
 
 h1, h2, h3, h4, h5, p {
@@ -169,6 +177,7 @@ h1, h2, h3, h4, h5, p {
 }
 
 .portfolio-item {
+    flex-basis: 33.333%;
     position: relative;
     width: 100%;
 }
@@ -265,6 +274,7 @@ h1, h2, h3, h4, h5, p {
 }
 
 .heading {
+    text-align: center;
     font-weight: bold;
     font-size: 2.5em;
     padding: 2rem;

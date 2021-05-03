@@ -24,7 +24,7 @@ const serviceCardEntries = [
     },
     {
         service: "General Carpentry",
-        description: "Our crew, collectively, has many years of experience. If you have a problem, we will find the best solution.",
+        description: "Our crew, collectively, has over two decades years of experience. If you have a problem, we will find the best solution.",
         image: retractableKnifeClipArt,
         imageAlt: "Retractable Knife Clip Art"
     },

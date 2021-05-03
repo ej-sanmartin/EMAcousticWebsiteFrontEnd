@@ -3,6 +3,7 @@ import { graphql, useStaticQuery, Link } from 'gatsby';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 
 import Layout from '../components/layout';
+import ContactForm from '../components/contactForm';
 
 import { aboutBlurb, serviceCardEntries } from '../assets/content/text.js';
 
@@ -101,6 +102,7 @@ const Home = () => {
       <div id="contact" className={homeStyles.headingContainer}>
         <h3 className={homeStyles.heading}>Where To Find Us</h3>
       </div>
+      <ContactForm />
       <div className={homeStyles.contentContainer}>
         <iframe 
           src={`https://www.google.com/maps/embed/v1/place?key=${process.env.GOOGLE_MAPS_EMBED_API_TOKEN}&q=${process.env.GOOGLE_MAPS_PLACE_ID}&center=41.73408,-72.62559&zoom=18`}

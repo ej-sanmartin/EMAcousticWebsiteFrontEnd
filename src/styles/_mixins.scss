@@ -32,3 +32,9 @@
     align-items: center;
     grid-template-columns: repeat(auto-fit, minmax($item-width, 1fr));
 }
+
+@mixin responsive-flex-box {
+    display: flex !important;
+    flex-wrap: wrap;
+    justify-content: center;
+}
