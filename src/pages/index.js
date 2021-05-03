@@ -57,8 +57,8 @@ const Home = () => {
           {serviceCardEntries.map((service) => {
             return (
               <div className={homeStyles.serviceCard}>
-                <GatsbyImage
-                  image={service.image}
+                <img
+                  src={service.image}
                   alt={service.imageAlt}
                   className={homeStyles.serviceCardImage}
                 />
