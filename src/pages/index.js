@@ -108,7 +108,7 @@ const Home = () => {
           src={`https://www.google.com/maps/embed/v1/place?key=${process.env.GOOGLE_MAPS_EMBED_API_TOKEN}&q=${process.env.GOOGLE_MAPS_PLACE_ID}&center=41.73408,-72.62559&zoom=18`}
           title='Google Maps Location'
           width='1000'
-          height='600'
+          height='800'
           loading="lazy"
           allowFullScreen
           className={homeStyles.map}>

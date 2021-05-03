@@ -1,0 +1,51 @@
+@import 'mixins';
+@import './variables';
+
+@media only screen and (max-width: 1100px) {
+    .contact-form-layout {
+        width: 95%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .form-content {
+        flex-basis: 100%;
+    }
+}
+
+.contact-form-layout {
+    z-index: 12;
+    background-color: grey;
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+}
+
+.inner-form-layout {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    
+}
+
+.form-item-layout {
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+}
+
+.form-content {
+    flex-basis: 50%;
+}
+
+.form-item {
+    display: flex;
+    flex-direction: column;
+    margin-top: .1em;
+    margin-bottom: .1em;
+}
+
+.error-text {
+    color: red;
+    opacity: .6;
+}
