@@ -6,6 +6,8 @@ import Layout from '../components/layout';
 
 import { StaticImage } from 'gatsby-plugin-image';
 
+import { aboutBlurb, serviceCardEntries } from '../assets/content/text.js';
+
 import * as homeStyles from '../styles/home.module.scss';
 
 const Home = () => {
@@ -45,41 +47,31 @@ const Home = () => {
           <hr className={homeStyles.decorativeLine}/>
         </div>
         <div>
-          <p>We, at R.C. Acousticals, have spent over two decades in the construction industry in Connecticut in both small and large scale projects delivering high quality services. We are a reliable, professional crew filled with experts in all facets of carpentry, dealing with wood, acoustical, and metal.</p>
+          <p>{aboutBlurb[0]}</p>
         </div>
         <div>
-          <p className={homeStyles.motto}>R.C. Acousticals ensures that you are getting the highest quality product, service, and professionalism.</p>
+          <p className={homeStyles.motto}>{aboutBlurb[1]}</p>
         </div>
       </div>
       <div className={homeStyles.servicesContainer}>
         <div className={homeStyles.serviceCardsLayout}>
 
-          {/* serviceCard will be its own component that an array of service objects will map to */}
-          <div className={homeStyles.serviceCard}>
-            <StaticImage
-              src="../assets/images/ceiling.png"
-              className={homeStyles.serviceCardImage}
-            />
-            <h5>Acoustical Ceiling</h5>
-            <p>What we do is provide this service with the highest quality imaginable</p>
-          </div>
+          {serviceCardEntries.map((service) => {
+            console.log(service.image);
 
-          <div className={homeStyles.serviceCard}>
-            <StaticImage
-              src="../assets/images/con-screws.png"
-              className={homeStyles.serviceCardImage}
-            />
-            <h5>Hardware</h5>
-            <p>What we do is provide this service with the highest quality imaginable</p>
-          </div>
-          <div className={homeStyles.serviceCard}>
-            <StaticImage
-              src="../assets/images/con-retractable-knife.png"
-              className={homeStyles.serviceCardImage}
-            />
-            <h5>General Carpentry</h5>
-            <p>What we do is provide this service with the highest quality imaginable</p>
-          </div>
+            return (
+              <div className={homeStyles.serviceCard}>
+                <StaticImage
+                  src={service.image}
+                  alt={service.imageAlt}
+                  className={homeStyles.serviceCardImage}
+                />
+                <h5>{service.service}</h5>
+                <p>{service.description}</p>
+              </div>
+            );
+          })}
+
         </div>
       </div>
       <div id="portfolio" className={homeStyles.portfolioHeadingContainer}>
@@ -91,7 +83,6 @@ const Home = () => {
       </div>
       <div className={homeStyles.portfolioGallery}>
 
-      {/* below will be a portfolioItem Card component */}
       {data.allContentfulPortfolioProfile.edges.map((edge) => {
         let image = getImage(edge.node.projectHeaderPhoto.gatsbyImageData);
 
@@ -109,6 +100,7 @@ const Home = () => {
           </Link>
         );
       })}
+
       </div>
       <div id="contact" className={homeStyles.headingContainer}>
         <h3 className={homeStyles.heading}>Where To Find Us</h3>

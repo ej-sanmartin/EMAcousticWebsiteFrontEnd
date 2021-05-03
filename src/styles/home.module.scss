@@ -117,11 +117,13 @@ h1, h2, h3, h4, h5, p {
     h5 {
         margin-top: 2em;
         text-align: center;
+        font-weight: bold;
     }
 
     p {
         max-width: 40ch;
         text-align: center;
+        font-size: .9em;
     }
 }
 

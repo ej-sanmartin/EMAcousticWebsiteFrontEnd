@@ -10,6 +10,13 @@ module.exports = {
     'gatsby-transformer-sharp',
     `gatsby-plugin-smoothscroll`,
     {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: `${__dirname}/src/assets/images`,
+      },
+    },
+    {
       resolve: `gatsby-source-contentful`,
       options: {
         spaceId: process.env.CONTENTFUL_SPACE_ID,
