@@ -34,7 +34,7 @@ const Home = () => {
   return (
     <Layout>
       <div className={`${homeStyles.openingImage} ${homeStyles.parallax}`}></div>
-      <div className={homeStyles.openingMessageContainer}>
+      <div id="top" className={homeStyles.openingMessageContainer}>
         <h2 className={homeStyles.firstOpeningPhrase}>Over 20 years of excellence</h2>
         <h2 className={homeStyles.secondOpeningPhrase}>We take pride in our impact</h2>
       </div>

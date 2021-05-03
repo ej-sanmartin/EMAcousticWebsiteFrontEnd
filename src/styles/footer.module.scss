@@ -59,10 +59,6 @@ div {
     justify-content: space-around;
 }
 
-.footer-icons {
-    color: #ddd;
-}
-
 .copyright-container {
     display: flex;
     justify-content: center;
@@ -79,4 +75,10 @@ div {
 
 .info-space {
     margin-top: 2em;
+}
+
+.top-button-container {
+    display: flex;
+    align-content: center;
+    justify-content: center;
 }

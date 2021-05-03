@@ -4,12 +4,16 @@ import * as footerStyles from '../styles/footer.module.scss';
 
 import { footerCompanySummary } from '../assets/content/text.js';
 
-import { Row, Col, Container } from 'react-bootstrap';
+import { Row, Col, Container, Nav } from 'react-bootstrap';
 
 import { IconContext } from '@react-icons/all-files';
 import { HiOutlinePhone } from '@react-icons/all-files/hi/HiOutlinePhone';
 import { AiOutlineHome } from '@react-icons/all-files/ai/AiOutlineHome';
 import { HiOutlineMail } from '@react-icons/all-files/hi/HiOutlineMail';
+import { BiUpArrow } from '@react-icons/all-files/bi/BiUpArrow';
+
+import { Link } from 'gatsby';
+import scrollTo from 'gatsby-plugin-smoothscroll';
 
 const Footer = () => {
     // keeps copyright year current forever
@@ -29,19 +33,28 @@ const Footer = () => {
                         <h4>Contact Info</h4>
                         <ul className={`${footerStyles.infoSpace}`}>
                             <IconContext.Provider value={{ size: '1.5em', title: 'Address: 79 Mill Brook Rd, East Hartford, CT, 06118' }}>
-                                <li><AiOutlineHome />101 Main St., East Hartford, CT 06118</li>
+                                <li><AiOutlineHome style={{ fill: "white" }} />101 Main St., East Hartford, CT 06118</li>
                             </IconContext.Provider>
                             <IconContext.Provider value={{ size: '1.5em', title: 'Phone Number: 860 888 1111' }}>
-                                <li><HiOutlinePhone /> 860 - 888 - 1111</li> 
+                                <li><HiOutlinePhone style={{ fill: "white" }} /> 860 - 888 - 1111</li> 
                             </IconContext.Provider>
                             <IconContext.Provider value={{ size: '1.5em', title: 'Email' }}>
-                                <li><HiOutlineMail />contact@rc_acoustics.com</li>
+                                <li><HiOutlineMail style={{ fill: "white" }} />contact@rc_acoustics.com</li>
                             </IconContext.Provider>
                         </ul>
                     </Col>
                 </Row>
                 <div className={footerStyles.copyrightContainer}>
                     <p className={footerStyles.copyright}>Copyright © R.C. Acousticals {year}. All Rights Reserved</p>  
+                </div>
+                <div className={footerStyles.topButtonContainer}>
+                    <Nav.Item style={{ marginBottom: "1em" }} as="button" onClick={() => scrollTo('#top')}>
+                        <Nav.Link>
+                            <IconContext.Provider value={{ size: '3em', color: 'white' }}>
+                                <BiUpArrow style={{ fill: "white" }} />
+                            </IconContext.Provider>
+                        </Nav.Link>
+                    </Nav.Item>
                 </div>
             </Container>
         </footer>
