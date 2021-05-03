@@ -5,7 +5,7 @@ import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 
 import Layout from '../components/layout';
 
-import * as portfolioItemStyles from '../styles/portfolioItem.module.scss';
+// import * as portfolioItemStyles from '../styles/portfolioItem.module.scss';
 
 export const query = graphql`
     query($slug: String!){
@@ -46,7 +46,7 @@ const PortfolioItem = (props) => {
                     <p>Location: {props.data.contentfulPortfolioProfile.location}</p>
                 </li>
             </ul>
-            
+            <h2>What We Did</h2>
             { documentToReactComponents(JSON.parse(props.data.contentfulPortfolioProfile.projectDescription.raw)) }
         </Layout>
     );

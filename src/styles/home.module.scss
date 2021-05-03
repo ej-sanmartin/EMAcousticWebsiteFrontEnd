@@ -96,13 +96,13 @@ h1, h2, h3, h4, h5, p {
 }
 
 .services-container {
-    min-height: 75vh;
+    min-height: 40vh;
 }
 
 .service-cards-layout {
     @include responsive-grid(350px);
     justify-items: center;
-    margin: auto 5em;
+    margin: 8em 5em;
     row-gap: 1em;
     margin-top: 2em;
 }

@@ -4,8 +4,6 @@ import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 
 import Layout from '../components/layout';
 
-import { StaticImage } from 'gatsby-plugin-image';
-
 import { aboutBlurb, serviceCardEntries } from '../assets/content/text.js';
 
 import * as homeStyles from '../styles/home.module.scss';
@@ -57,12 +55,10 @@ const Home = () => {
         <div className={homeStyles.serviceCardsLayout}>
 
           {serviceCardEntries.map((service) => {
-            console.log(service.image);
-
             return (
               <div className={homeStyles.serviceCard}>
-                <StaticImage
-                  src={service.image}
+                <GatsbyImage
+                  image={service.image}
                   alt={service.imageAlt}
                   className={homeStyles.serviceCardImage}
                 />

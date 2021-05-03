@@ -8,7 +8,6 @@ import { Navbar, Nav, Container } from 'react-bootstrap';
 
 import { FaPhoneAlt } from '@react-icons/all-files/fa/FaPhoneAlt';
 
-
 import * as headerStyles from '../styles/header.module.scss';
 
 const Header = () => {

@@ -1,6 +1,6 @@
-import ceilingClipArt from "../images/con-a-ceiling.png";
-import screwsClipArt from "../images/con-a-hardware.png";
-import retractableKnifeClipArt from "../images/con-a-knife.png";
+const ceilingClipArt = "con-a-ceiling.png";
+const screwsClipArt = "con-a-hardware.png";
+const retractableKnifeClipArt = "con-a-knife.png";
 
 const aboutBlurb = [
     "We, at R.C. Acousticals, have spent over two decades in the construction industry in Connecticut in both small and large scale projects delivering high quality services. We are a reliable, professional crew filled with experts in all facets of carpentry, dealing with wood, acoustical, and metal.",
@@ -30,7 +30,7 @@ const serviceCardEntries = [
     },
 ]
 
-const contactMessage = [];
+const contactMessage = "";
 
 export {
     aboutBlurb,
