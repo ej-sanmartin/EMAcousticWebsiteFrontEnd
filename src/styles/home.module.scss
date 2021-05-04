@@ -308,11 +308,18 @@ div {
     }
 }
 
+.form-placement {
+    position: absolute;
+    margin-top: 25%;
+    margin-left: 5%;
+}
+
 .map {
     position: relative;
     width: 100vw;
     margin-bottom: -2%;
-    min-height: 90vh;
+    margin-top: -2%;
+    min-height: 100vh;
     justify-self: center;
     z-index: -5;
     border: 0;

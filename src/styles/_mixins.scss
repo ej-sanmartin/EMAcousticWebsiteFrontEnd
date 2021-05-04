@@ -19,6 +19,11 @@
     right: 0;
 }
 
+@mixin centerfy {
+    position: absolute;
+    top: 50%;
+}
+
 @mixin attention-text-large {
     font-weight: bold;
     text-transform: uppercase;
