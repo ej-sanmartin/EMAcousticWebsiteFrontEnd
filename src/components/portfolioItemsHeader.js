@@ -2,7 +2,6 @@ import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Link } from 'gatsby';
 import { StaticImage } from 'gatsby-plugin-image';
-import scrollTo from 'gatsby-plugin-smoothscroll';
 
 import { Navbar, Nav, Container } from 'react-bootstrap';
 
@@ -10,9 +9,9 @@ import { FaPhoneAlt } from '@react-icons/all-files/fa/FaPhoneAlt';
 
 import * as headerStyles from '../styles/header.module.scss';
 
-const Header = () => {
+const PortfolioItemsHeader = () => {
     return (
-        <header id="top" className={headerStyles.navbar}>
+        <header id="items-top" className={headerStyles.navbar}>
             <Navbar collapseOnSelect expand="sm">
                 <Container className={headerStyles.navbarLayout}>
                     <Navbar.Brand>
@@ -27,24 +26,24 @@ const Header = () => {
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className="justify-content-end" style={{ width: "100%" }}>
-                            <Nav.Item as="button">
+                            <Nav.Item as="li">
                                 <Nav.Link>
                                    <Link className={headerStyles.pageLinks} to="/">Home</Link> 
                                 </Nav.Link>
                             </Nav.Item>
-                            <Nav.Item as="button" onClick={() => scrollTo('#about')}>
+                            <Nav.Item as="li">
                                 <Nav.Link>
-                                   <Link className={headerStyles.pageLinks}>About</Link> 
+                                   <Link className={headerStyles.pageLinks} to="/">About</Link> 
                                 </Nav.Link>
                             </Nav.Item>
-                            <Nav.Item as="button" onClick={() => scrollTo('#portfolio')}>
+                            <Nav.Item as="li">
                                 <Nav.Link>
-                                    <Link className={headerStyles.pageLinks}>Portfolio</Link>
+                                    <Link className={headerStyles.pageLinks} to="/">Portfolio</Link>
                                 </Nav.Link>
                             </Nav.Item>
-                            <Nav.Item as="button" onClick={() => scrollTo('#contact')}>
+                            <Nav.Item as="li">
                                 <Nav.Link>
-                                    <Link className={headerStyles.pageLinks}>Contact</Link>
+                                    <Link className={headerStyles.pageLinks} to="/">Contact</Link>
                                 </Nav.Link>
                             </Nav.Item>
                             <Nav.Item as="li">
@@ -60,4 +59,4 @@ const Header = () => {
     );
 }
 
-export default Header;
+export default PortfolioItemsHeader;

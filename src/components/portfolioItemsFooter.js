@@ -14,7 +14,7 @@ import { BiUpArrow } from '@react-icons/all-files/bi/BiUpArrow';
 
 import scrollTo from 'gatsby-plugin-smoothscroll';
 
-const Footer = () => {
+const PortfolioItemsFooter = () => {
     // keeps copyright year current forever
     let today = new Date();
     let year = today.getFullYear();
@@ -47,7 +47,7 @@ const Footer = () => {
                     <p className={footerStyles.copyright}>Copyright © R.C. Acousticals {year}. All Rights Reserved</p>  
                 </div>
                 <div className={footerStyles.topButtonContainer}>
-                    <Nav.Item style={{ marginBottom: "1em" }} as="button" onClick={() => scrollTo('#top')}>
+                    <Nav.Item style={{ marginBottom: "1em" }} as="button" onClick={() => scrollTo('#items-top')}>
                         <Nav.Link>
                             <IconContext.Provider value={{ size: '3em', color: 'white' }}>
                                 <BiUpArrow style={{ fill: "white" }} />
@@ -62,4 +62,4 @@ const Footer = () => {
     );
 }
 
-export default Footer;
+export default PortfolioItemsFooter;
