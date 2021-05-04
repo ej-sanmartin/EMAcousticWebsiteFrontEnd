@@ -30,11 +30,8 @@ const serviceCardEntries = [
     },
 ]
 
-const contactMessage = "";
-
 export {
     aboutBlurb,
     footerCompanySummary,
     serviceCardEntries,
-    contactMessage,
 };
