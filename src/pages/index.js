@@ -90,7 +90,7 @@ const Home = () => {
       <div
         data-sal="slide-up"
         data-sal-duration="600"
-        data-sal-easing="ease"
+        data-sal-easing="ease-out"
       >
         <div className={homeStyles.portfolioHeadingContainer}>
           <div>
@@ -124,8 +124,8 @@ const Home = () => {
       <div id="contact"></div>
       <div
         data-sal="slide-up"
-        data-sal-duration="600"
-        data-sal-easing="ease"
+        data-sal-duration="400"
+        data-sal-easing="ease-out"
       >
         <div className={homeStyles.headingContainer}>
           <h3 className={homeStyles.heading}>WHERE TO FIND US</h3>
