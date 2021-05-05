@@ -1,6 +1,8 @@
 import React, { useEffect } from "react";
 import { graphql, useStaticQuery, Link } from 'gatsby';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
+import { isMobile } from 'react-device-detect';
+import sal from 'sal.js';
 
 import Layout from '../components/layout';
 import ContactForm from '../components/contactForm';
@@ -12,6 +14,8 @@ import * as homeStyles from '../styles/home.module.scss';
 const Home = () => {
   useEffect(() => {
     document.querySelector('body').scrollTo(0, 0);
+
+    if(isMobile) sal({ disabled: true });
   }, []);
 
   const data = useStaticQuery(graphql`
