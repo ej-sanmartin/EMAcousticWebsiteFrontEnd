@@ -28,6 +28,8 @@ p {
 
 .main-image {
     max-height: 60vh;
+    object-fit: cover;
+    width: 100%;
     display: flex;
     align-self: center;
     filter: brightness(80%);

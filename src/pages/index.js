@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
 import { graphql, useStaticQuery, Link } from 'gatsby';
-import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import { isMobile } from 'react-device-detect';
 import sal from 'sal.js';
 
@@ -27,11 +26,9 @@ const Home = () => {
             location
             slug
             projectHeaderPhoto {
-              gatsbyImageData(
-                width: 400
-                placeholder: BLURRED
-                formats: [AUTO, PNG, WEBP]
-              )
+              fluid(maxWidth: 400) {
+                src
+              }
               title
           }
           }
@@ -106,12 +103,12 @@ const Home = () => {
         <div className={homeStyles.portfolioGallery}>
 
         {data.allContentfulPortfolioProfile.edges.map((edge) => {
-          let image = getImage(edge.node.projectHeaderPhoto.gatsbyImageData);
+          let image = edge.node.projectHeaderPhoto.fluid.src;
 
           return (
             <Link className={homeStyles.portfolioItem} to={`/portfolio/${edge.node.slug}`}>
-              <GatsbyImage
-                image={image}
+              <img
+                src={image}
                 className={homeStyles.portfolioItemImage}
                 alt={edge.node.projectHeaderPhoto.title}
               />

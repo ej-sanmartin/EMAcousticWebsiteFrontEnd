@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
 import { graphql, Link } from 'gatsby';
-import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 
 import { Carousel } from 'react-bootstrap';
@@ -20,19 +19,15 @@ export const query = graphql`
                 raw
             }
             projectHeaderPhoto {
-                gatsbyImageData(
-                    width: 1200
-                    placeholder: BLURRED
-                    formats: [AUTO, PNG, WEBP]
-                  )
+                fluid(maxWidth: 1000) {
+                    src
+                }
                 title
             }
             projectImages {
-                gatsbyImageData(
-                    width: 500
-                    placeholder: BLURRED
-                    formats: [AUTO, WEBP]
-                )
+                fluid(maxWidth: 500) {
+                    src
+                }
             }
         }
     }
@@ -43,10 +38,10 @@ const PortfolioItem = (props) => {
         document.querySelector('body').scrollTo(0, 0);
     }, []);
 
-    const image = getImage(props.data.contentfulPortfolioProfile.projectHeaderPhoto);
+    const image = props.data.contentfulPortfolioProfile.projectHeaderPhoto.fluid.src;
     
     let images = [];
-    props.data.contentfulPortfolioProfile.projectImages.map(item => images.push(item));
+    props.data.contentfulPortfolioProfile.projectImages.map(item => images.push(item.fluid.src));
 
     return (
         <NonHomeLayout>
@@ -58,8 +53,8 @@ const PortfolioItem = (props) => {
                 <p>Our Work</p> 
                 </div>
             </div>
-            <GatsbyImage
-                image={image}
+            <img
+                src={image}
                 alt={props.data.contentfulPortfolioProfile.projectHeaderPhoto.title}
                 className={portfolioItemStyles.mainImage}
             />
@@ -83,12 +78,11 @@ const PortfolioItem = (props) => {
                 <hr className={portfolioItemStyles.galleryLine} />
                 <Carousel className={portfolioItemStyles.gallery}>
                     {images.map((image) => {
-                        let picture = getImage(image);
                         return (
                             <Carousel.Item>
-                                <GatsbyImage
+                                <img
                                     className="d-block w-100"
-                                    image={picture}
+                                    src={image}
                                 />
                             </Carousel.Item>
                         );
