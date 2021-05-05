@@ -42,9 +42,7 @@ const PortfolioItem = (props) => {
     const image = getImage(props.data.contentfulPortfolioProfile.projectHeaderPhoto);
     
     let images = [];
-    props.data.contentfulPortfolioProfile.projectImages.map((item) => {
-        images.push(item);
-    });
+    props.data.contentfulPortfolioProfile.projectImages.map(item => images.push(item));
 
     return (
         <PortfolioLayout>
@@ -92,7 +90,7 @@ const PortfolioItem = (props) => {
                         );
                     })}
                 </Carousel>
-                <Link to="/">Return</Link>
+                <Link className={portfolioItemStyles.returnButton} to="/"><p>Return</p></Link>
             </div>
         </PortfolioLayout>
     );

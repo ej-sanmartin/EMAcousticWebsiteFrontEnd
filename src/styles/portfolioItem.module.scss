@@ -78,3 +78,28 @@ p {
         }
     }
 }
+
+.return-button {
+    background-color: $label-colour;
+    padding: 1em;
+    border-radius: 30px;
+
+    &:hover {
+        opacity: .7;
+    }
+
+    &:focus, p:focus {
+        opacity: .9;
+    }
+
+    p {
+        font-weight: bold;
+        font-size: 1.5em;
+        display: inline-block;
+
+        &:hover {
+            text-decoration: none;
+            opacity: .8;
+        }
+    }
+}
