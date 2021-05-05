@@ -5,7 +5,7 @@ import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 
 import { Carousel } from 'react-bootstrap';
 
-import PortfolioLayout from '../components/portfolioLayout';
+import NonHomeLayout from '../components/nonHomeLayout';
 
 import * as portfolioItemStyles from '../styles/portfolioItem.module.scss';
 
@@ -49,7 +49,7 @@ const PortfolioItem = (props) => {
     props.data.contentfulPortfolioProfile.projectImages.map(item => images.push(item));
 
     return (
-        <PortfolioLayout>
+        <NonHomeLayout>
             <div className={portfolioItemStyles.headerBox}></div>
             <div className={portfolioItemStyles.portfolioHeadingContainer}>
                 <div>
@@ -96,7 +96,7 @@ const PortfolioItem = (props) => {
                 </Carousel>
                 <Link className={portfolioItemStyles.returnButton} to="/"><p>Return</p></Link>
             </div>
-        </PortfolioLayout>
+        </NonHomeLayout>
     );
 };
 

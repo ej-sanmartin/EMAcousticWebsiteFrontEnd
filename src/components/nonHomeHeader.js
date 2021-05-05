@@ -9,7 +9,7 @@ import { FaPhoneAlt } from '@react-icons/all-files/fa/FaPhoneAlt';
 
 import * as headerStyles from '../styles/header.module.scss';
 
-const PortfolioItemsHeader = () => {
+const NonHomeHeader = () => {
     return (
         <header id="items-top" className={headerStyles.navbar}>
             <Navbar collapseOnSelect expand="sm">
@@ -59,4 +59,4 @@ const PortfolioItemsHeader = () => {
     );
 }
 
-export default PortfolioItemsHeader;
+export default NonHomeHeader;

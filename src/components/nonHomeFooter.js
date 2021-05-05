@@ -14,7 +14,7 @@ import { BiUpArrow } from '@react-icons/all-files/bi/BiUpArrow';
 
 import scrollTo from 'gatsby-plugin-smoothscroll';
 
-const PortfolioItemsFooter = () => {
+const NonHomeFooter = () => {
     // keeps copyright year current forever
     let today = new Date();
     let year = today.getFullYear();
@@ -62,4 +62,4 @@ const PortfolioItemsFooter = () => {
     );
 }
 
-export default PortfolioItemsFooter;
+export default NonHomeFooter;
