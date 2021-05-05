@@ -10,9 +10,27 @@ and (-webkit-min-device-pixel-ratio: 2) {
         @include center-item;
     }
 
-    .responsiveHamburger {
-        color: red;
+    .responsive-hamburger {
+        margin-right: 1rem;
+        z-index: 100;
     }
+
+    .responsive-collapse {
+        background-color: rgba(0, 0, 0, 0.9);
+        height: 102vh;
+        padding-top: 17rem;
+        padding-bottom: 17rem;
+        margin-top: -11rem;
+        transition: 100ms;
+    }
+
+    .page-links {
+        letter-spacing: .2em;
+    }
+}
+
+.nav-link {
+    color: red; 
 }
 
 .navbar {
@@ -21,6 +39,12 @@ and (-webkit-min-device-pixel-ratio: 2) {
     left: 0;
     z-index: 100;
     width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+button {
+    padding: inherit;
 }
 
 .navbar-layout {
