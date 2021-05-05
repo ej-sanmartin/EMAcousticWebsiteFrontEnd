@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { graphql, useStaticQuery, Link } from 'gatsby';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 
@@ -10,6 +10,10 @@ import { aboutBlurb, serviceCardEntries } from '../assets/content/text.js';
 import * as homeStyles from '../styles/home.module.scss';
 
 const Home = () => {
+  useEffect(() => {
+    document.querySelector('body').scrollTo(0, 0);
+  }, []);
+
   const data = useStaticQuery(graphql`
     query {
       allContentfulPortfolioProfile ( sort: { fields: projectData, order: DESC } ) {

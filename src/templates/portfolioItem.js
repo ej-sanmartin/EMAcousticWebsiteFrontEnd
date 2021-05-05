@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { graphql, Link } from 'gatsby';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
@@ -39,6 +39,10 @@ export const query = graphql`
 `;
 
 const PortfolioItem = (props) => {
+    useEffect(() => {
+        document.querySelector('body').scrollTo(0, 0);
+    }, []);
+
     const image = getImage(props.data.contentfulPortfolioProfile.projectHeaderPhoto);
     
     let images = [];
