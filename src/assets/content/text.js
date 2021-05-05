@@ -18,7 +18,7 @@ const serviceCardEntries = [
     },
     {
         service: "Hardware",
-        description: "We can provide superb installation services and are able to find the best materials and manufacturers for your project.",
+        description: "We provide superb installation services and are able to find the best materials and manufacturers for your project.",
         image: screwsClipArt,
         imageAlt: "Screws Clip Art"
     },

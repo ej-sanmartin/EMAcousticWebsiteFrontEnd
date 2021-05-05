@@ -9,6 +9,10 @@
     color: variables.$base-font-colour;
     margin: 0;
     padding: 0;
+
+    &::selection {
+        background-color: variables.$light-font-colour;
+    }
 }
 
 body, html {
