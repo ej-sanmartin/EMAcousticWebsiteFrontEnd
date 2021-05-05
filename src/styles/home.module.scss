@@ -112,7 +112,7 @@ h1, h2, h3, h4, h5, p {
 .service-cards-layout {
     @include responsive-grid(350px);
     justify-items: center;
-    margin: 8em 5em;
+    margin: 10em 5em 10em;
     row-gap: 1em;
     margin-top: 2em;
 }
@@ -277,6 +277,7 @@ div {
         p.motto {
            text-align: center;
            margin: 2rem;
+           margin-bottom: 10em;
         }
         
     }

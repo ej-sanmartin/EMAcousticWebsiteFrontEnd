@@ -43,7 +43,13 @@ const Home = () => {
         <h2 className={homeStyles.firstOpeningPhrase}>Over 20 years of excellence</h2>
         <h2 className={homeStyles.secondOpeningPhrase}>We take pride in our impact</h2>
       </div>
-      <div id="about" className={`${homeStyles.aboutContainer} ${homeStyles.blurbLayout}`}>
+      <div id="about"></div>
+      <div
+        data-sal="slide-up"
+        data-sal-duration="600"
+        data-sal-easing="ease"
+        className={`${homeStyles.aboutContainer} ${homeStyles.blurbLayout}`}
+      >
         <div className={homeStyles.subHeadingTextStyles}>
           <h4>WE ARE HERE TO SERVE</h4>
           <h3>Acoustical Ceiling, Hardware, and General Carpentry Services</h3>
@@ -56,7 +62,12 @@ const Home = () => {
           <p className={homeStyles.motto}>{aboutBlurb[1]}</p>
         </div>
       </div>
-      <div className={homeStyles.servicesContainer}>
+      <div
+        data-sal="slide-up"
+        data-sal-duration="600"
+        data-sal-easing="ease"
+        className={homeStyles.servicesContainer}
+      >
         <div className={homeStyles.serviceCardsLayout}>
 
           {serviceCardEntries.map((service) => {
@@ -75,48 +86,62 @@ const Home = () => {
 
         </div>
       </div>
-      <div id="portfolio" className={homeStyles.portfolioHeadingContainer}>
-        <div>
-          <h3>Portfolio</h3>
-          <hr />
-          <p>Recent Works</p> 
+      <div id="portfolio"></div>
+      <div
+        data-sal="slide-up"
+        data-sal-duration="600"
+        data-sal-easing="ease"
+      >
+        <div className={homeStyles.portfolioHeadingContainer}>
+          <div>
+            <h3>Portfolio</h3>
+            <hr />
+            <p>Recent Works</p> 
+          </div>
+        </div>
+        <div className={homeStyles.portfolioGallery}>
+
+        {data.allContentfulPortfolioProfile.edges.map((edge) => {
+          let image = getImage(edge.node.projectHeaderPhoto.gatsbyImageData);
+
+          return (
+            <Link className={homeStyles.portfolioItem} to={`/portfolio/${edge.node.slug}`}>
+              <GatsbyImage
+                image={image}
+                className={homeStyles.portfolioItemImage}
+                alt={edge.node.projectHeaderPhoto.title}
+              />
+              <div className={homeStyles.portfolioItemImageOverlay}>
+                <h4 className={homeStyles.portfolioItemTitle}>{edge.node.projectName}</h4>
+                <p className={homeStyles.portfolioItemLocation}>{edge.node.location}</p>
+              </div>
+            </Link>
+          );
+        })}
         </div>
       </div>
-      <div className={homeStyles.portfolioGallery}>
 
-      {data.allContentfulPortfolioProfile.edges.map((edge) => {
-        let image = getImage(edge.node.projectHeaderPhoto.gatsbyImageData);
-
-        return (
-          <Link className={homeStyles.portfolioItem} to={`/portfolio/${edge.node.slug}`}>
-            <GatsbyImage
-              image={image}
-              className={homeStyles.portfolioItemImage}
-              alt={edge.node.projectHeaderPhoto.title}
-            />
-            <div className={homeStyles.portfolioItemImageOverlay}>
-              <h4 className={homeStyles.portfolioItemTitle}>{edge.node.projectName}</h4>
-              <p className={homeStyles.portfolioItemLocation}>{edge.node.location}</p>
-            </div>
-          </Link>
-        );
-      })}
-
-      </div>
-      <div id="contact" className={homeStyles.headingContainer}>
-        <h3 className={homeStyles.heading}>WHERE TO FIND US</h3>
-      </div>
-      <div className={homeStyles.contentContainer}>
-        <ContactForm className={homeStyles.formPlacement} />
-        <iframe 
-          src={`https://www.google.com/maps/embed/v1/place?key=${process.env.GOOGLE_MAPS_EMBED_API_TOKEN}&q=${process.env.GOOGLE_MAPS_PLACE_ID}&center=41.73408,-72.62559&zoom=18`}
-          title='Google Maps Location'
-          width='1000'
-          height='400'
-          loading="lazy"
-          allowFullScreen
-          className={homeStyles.map}>
-        </iframe>
+      <div id="contact"></div>
+      <div
+        data-sal="slide-up"
+        data-sal-duration="600"
+        data-sal-easing="ease"
+      >
+        <div className={homeStyles.headingContainer}>
+          <h3 className={homeStyles.heading}>WHERE TO FIND US</h3>
+        </div>
+        <div className={homeStyles.contentContainer}>
+          <ContactForm className={homeStyles.formPlacement} />
+          <iframe 
+            src={`https://www.google.com/maps/embed/v1/place?key=${process.env.GOOGLE_MAPS_EMBED_API_TOKEN}&q=${process.env.GOOGLE_MAPS_PLACE_ID}&center=41.73408,-72.62559&zoom=18`}
+            title='Google Maps Location'
+            width='1000'
+            height='400'
+            loading="lazy"
+            allowFullScreen
+            className={homeStyles.map}>
+          </iframe>
+        </div>
       </div>
     </Layout>
   );
