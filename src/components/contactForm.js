@@ -57,7 +57,19 @@ export default class ContactForm extends Component {
                             }}
                         >
                             {() => (
-                                <Form className={`${contactFormStyles.formItemLayout} ${contactFormStyles.formContent}`} name="contact" data-netlify={true}>
+                                <Form 
+                                    className={`${contactFormStyles.formItemLayout} ${contactFormStyles.formContent}`}
+                                    name="contact v1"
+                                    data-netlify={true}
+                                    data-netlify-honeypots="bot-field"
+                                >
+                                    <input type="hidden" name="contact" value="contact v1" />
+                                    <p hidden>
+                                        <label>
+                                            Don't fill this out: <input name="bot-field" />
+                                        </label>
+                                    </p>
+                                        
                                     <div className={contactFormStyles.formItem}>
                                         <label htmlFor="name">Full Name</label>
                                         <Field name="name" />
