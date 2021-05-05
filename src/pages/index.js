@@ -100,7 +100,7 @@ const Home = () => {
 
       </div>
       <div id="contact" className={homeStyles.headingContainer}>
-        <h3 className={homeStyles.heading}>Where To Find Us</h3>
+        <h3 className={homeStyles.heading}>WHERE TO FIND US</h3>
       </div>
       <div className={homeStyles.contentContainer}>
         <ContactForm className={homeStyles.formPlacement} />
@@ -108,7 +108,7 @@ const Home = () => {
           src={`https://www.google.com/maps/embed/v1/place?key=${process.env.GOOGLE_MAPS_EMBED_API_TOKEN}&q=${process.env.GOOGLE_MAPS_PLACE_ID}&center=41.73408,-72.62559&zoom=18`}
           title='Google Maps Location'
           width='1000'
-          height='1100'
+          height='400'
           loading="lazy"
           allowFullScreen
           className={homeStyles.map}>

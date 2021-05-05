@@ -43,3 +43,37 @@
     flex-wrap: wrap;
     justify-content: center;
 }
+
+@mixin portfolio-heading-style {
+    @include center-in-div;
+    min-height: 25vh;
+    padding-top: .5rem;
+    padding-bottom: .5rem;;
+    background-color: #ddd;
+
+    div {
+        display: flex;
+        flex-direction: column;
+        text-transform: uppercase;
+        text-align: center;
+
+        h3 {
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: -.1rem;
+            letter-spacing: .075rem;
+        }
+        
+        p {
+            margin-top: -.1rem;
+            letter-spacing: .2rem;
+        }
+    }
+}
+
+@mixin hr-line($line-style){
+    z-index: 2;
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient($line-style);
+}

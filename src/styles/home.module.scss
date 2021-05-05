@@ -145,30 +145,7 @@ h1, h2, h3, h4, h5, p {
 }
 
 .portfolio-heading-container {
-    @include center-in-div;
-    min-height: 25vh;
-    padding-top: .5rem;
-    padding-bottom: .5rem;;
-    background-color: #ddd;
-
-    div {
-        display: flex;
-        flex-direction: column;
-        text-transform: uppercase;
-        text-align: center;
-
-        h3 {
-            font-size: 2rem;
-            font-weight: bold;
-            margin-bottom: -.1rem;
-            letter-spacing: .075rem;
-        }
-        
-        p {
-            margin-top: -.1rem;
-            letter-spacing: .2rem;
-        }
-    }
+    @include portfolio-heading-style;
 }
 
 .portfolio-gallery {
@@ -236,15 +213,11 @@ h1, h2, h3, h4, h5, p {
 .heading-container {
     @include center-in-div;
     min-height: 25vh;
-    background-color: $light-background-colour;
-    margin-bottom: -20%;
+    background-color: $header-background-colour;
 }
 
 .decorative-line {
-    z-index: 2;
-    border: 0;
-    height: 1px;
-    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+    @include hr-line((to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0)));
 }
 
 .first-opening-phrase {
@@ -274,9 +247,10 @@ h1, h2, h3, h4, h5, p {
 }
 
 .heading {
+    letter-spacing: .25em;
     text-align: center;
     font-weight: bold;
-    font-size: 2.5em;
+    font-size: 2.25em;
     padding: 2rem;
 }
 
@@ -310,15 +284,13 @@ div {
 
 .form-placement {
     position: absolute;
-    margin-top: 25%;
+    margin-top: 5%;
     margin-left: 5%;
 }
 
 .map {
     position: relative;
     width: 100vw;
-    margin-bottom: -2%;
-    margin-top: -2%;
     min-height: 100vh;
     justify-self: center;
     z-index: -5;

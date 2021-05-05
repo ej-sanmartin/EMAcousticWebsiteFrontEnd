@@ -1,41 +1,31 @@
+@import './variables';
+
 footer {
     z-index: 10;
     clip-path: polygon(0 8%, 100% 0, 100% 100%, 0% 100%);
 }
 
 .container {
+    margin-top: -2.5%;
     padding-top: 4em;
-    border-top: .1em #ddd;
-    background: #052517;
+    background: $background-colour;
 
     div {
         div {
             h4 {
-                color: #ddd;
+                color: $footer-text-colour;
             }
 
             ul {
                 li {
-                    color: #ddd;
+                    color: $footer-text-colour;
                 }
             }
         }
 
         p {
-            color: #ddd;
+            color: $footer-text-colour;
         }
-    }
-
-    &::before {
-        display: none;
-        content: '';
-        position: absolute;
-        width: 120vw;
-        height: 40px;
-        background: red;
-        transform: rotate(-1deg);
-        z-index: 10;
-        margin-top: -3.5%;
     }
 }
 

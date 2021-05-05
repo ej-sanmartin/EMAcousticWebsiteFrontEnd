@@ -16,7 +16,65 @@
 }
 
 p {
+    color: $description-text-colour;
     span {
         font-weight: bold;
+    }
+}
+
+.portfolio-heading-container {
+    @include portfolio-heading-style;
+}
+
+.main-image {
+    max-height: 60vh;
+    display: flex;
+    align-self: center;
+    filter: brightness(80%);
+}
+
+.project-details {
+    margin: 4em auto;
+    width: 90%;
+
+    h1 {
+        font-weight: bold;
+        font-size: 3em;
+    }
+
+    h2 {
+        margin-top: 1.5em;
+        font-weight: bold;
+        font-size: 1.75em;
+    }
+}
+
+.hr-line {
+    @include hr-line((to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0)));
+}
+
+.gallery-header {
+    margin-top: 4em;
+    font-size: 1.75em;
+}
+
+.gallery-line {
+    @include hr-line((to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0)));
+    width: 60%;
+}
+
+.gallery {
+    margin-bottom: 4em;
+    width: 50%;
+    filter: brightness(.8);
+
+    div {
+        height: 400px;
+        overflow: hidden;
+        width: 100%;
+
+        div {
+            width: 100%;
+        }
     }
 }
