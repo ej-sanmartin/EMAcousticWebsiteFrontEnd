@@ -14,12 +14,30 @@
 }
 
 @media only screen and (max-width: 600px) {
-    .form-item-layout {
+    .contact-form-layout {
+        width: 90vw !important;
+    }
+
+    .form-item-layout, .inner-form-layout {
+        width: fit-content !important;
         flex-basis: 100%;
+
+        div {
+            margin-top: .2em;
+            margin-bottom: .2em;
+            
+            p {
+                text-align: left;
+            }
+        }
     }
 
     .contact-message {
         flex-basis: 100%;
+    }
+
+    .contact-blurb {
+        margin-top: 2em !important;
     }
 }
 

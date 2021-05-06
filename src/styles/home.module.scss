@@ -67,13 +67,85 @@
             min-height: 60vh !important;
         }
     }
-
 }
 
 /* For mobile phones */
 @media only screen and (max-width: 600px) {
+    * {
+        font-size: 1em;
+    }
+
+    .first-opening-phrase, .second-opening-phrase {
+        font-size: 1.5em !important;
+    }
+
+    .opening-message-container::after {
+        bottom: -5% !important;
+    }
+
+    .about-container, .services-container, .sub-heading-text-styles {
+        padding: .1rem .25rem !important;
+    }
+    
+    div {
+        div:nth-child(3) {
+            p.motto {
+               text-align: center;
+               margin: 1em !important;
+               margin-bottom: 10em !important;
+            } 
+        }
+    }
+
+    .sub-heading-text-styles {
+        h4 {
+            padding-left: .15rem;
+            padding-right: .15rem;
+            padding-bottom: 2rem;
+        }
+    }
+
+    .service-cards-layout {
+        row-gap: 2.5em !important;
+        margin: 6em 1em !important;
+        margin-top: -6em !important;
+    }
+
+    .portfolio-heading-container {
+        min-height: 25vh !important;
+
+        div {
+            p {
+                font-size: 1em;
+            }
+        }
+    }
+
+    .heading-container {
+        min-height: 20vh !important;
+        
+        h3 {
+            font-size: 1.75em;
+        }
+    }
+
+    div {
+        p {
+            width: 90%;
+            margin: 0 auto;
+            text-align: center;
+        }
+    }
+
     .portfolio-item {
         flex-basis: 100% !important;
+    }
+
+    .content-container {
+        min-height: 115vh !important;
+        iframe {
+            min-height: 125vh !important;
+        }
     }
 }
 
@@ -318,8 +390,7 @@ div {
            text-align: center;
            margin: 2rem;
            margin-bottom: 10em;
-        }
-        
+        } 
     }
 }
 
