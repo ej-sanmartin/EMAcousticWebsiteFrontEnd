@@ -10,6 +10,7 @@ module.exports = {
     'gatsby-transformer-sharp',
     `gatsby-plugin-smoothscroll`,
     `gatsby-plugin-scroll-reveal`,
+    `gatsby-plugin-remove-serviceworker`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
