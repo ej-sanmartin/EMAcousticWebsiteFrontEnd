@@ -9,7 +9,7 @@
     color: variables.$base-font-colour;
     margin: 0;
     padding: 0;
-    cursor: "pointer";
+    cursor: pointer;
 
     &::selection {
         background-color: variables.$light-font-colour;
