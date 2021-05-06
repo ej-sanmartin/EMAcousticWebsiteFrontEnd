@@ -1,5 +1,17 @@
 @import './variables';
 
+/* For tablets and smaller screened laptops */
+@media only screen and (max-width: 1100px) {
+    .container {
+        margin-top: -4.6% !important;
+    }
+}
+
+/* For mobile phones */
+@media only screen and (max-width: 600px) {
+
+}
+
 footer {
     z-index: 10;
     clip-path: polygon(0 8%, 100% 0, 100% 100%, 0% 100%);

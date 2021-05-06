@@ -4,22 +4,49 @@
 /* For tablets and smaller screened laptops */
 @media only screen and (max-width: 1100px) {
     h1, h2, h3, h4, h5, p {
-        padding: 1em;
+        font-size: 1.25em;
+    }
+
+    .opening-message-container::after {
+        bottom: -2.5% !important;
     }
 
     .first-opening-phrase,
     .second-opening-phrase {
-        font-size: 24px !important;
+        font-size: 4em !important;
         animation-name: fade-in !important;
+        animation-duration: 400ms;
         animation-fill-mode: forwards;
         text-align: center !important;
+    }
+
+    .first-opening-phrase {
+        margin-top: -1em !important;
+    }
+
+    .sub-heading-text-styles {
+        text-align: center;
+        
+        h4 {
+            margin: 0 auto;
+        }
     }
 
     .service-cards-layout {
         @include responsive-flex-box;
         margin: auto 2em;
-        margin-top: -10em !important;
+        margin-top: -8em !important;
         margin-bottom: 2em !important;
+    }
+
+    .service-card {
+        h5, p {
+            font-size: 1.15em !important;
+        }
+    }
+
+    .portfolio-heading-container {
+        min-height: 15vh !important;
     }
 
     .portfolio-gallery {
@@ -27,8 +54,20 @@
     }
 
     .portfolio-item {
-        flex-basis: 50%;
+        flex-basis: 50% !important;
     }
+
+    .heading-container {
+        min-height: 15vh !important;
+    }
+
+    .content-container {
+        min-height: 50vh !important;
+        iframe {
+            min-height: 60vh !important;
+        }
+    }
+
 }
 
 /* For mobile phones */
@@ -144,12 +183,12 @@ h1, h2, h3, h4, h5, p {
 }
 
 .portfolio-heading-container {
-    @include portfolio-heading-style;
+    @include portfolio-heading-style(.5rem);
 }
 
 .portfolio-gallery {
-    @include responsive-grid(420px);
-    grid-auto-rows: 1fr;
+    @include responsive-flex-box;
+    background-color: #ddd;
 }
 
 .portfolio-item {
@@ -263,6 +302,8 @@ h1, h2, h3, h4, h5, p {
 
     h4 {
         letter-spacing: .4rem;
+        text-align: center;
+        margin: 0 auto;
     }
 
     hr {

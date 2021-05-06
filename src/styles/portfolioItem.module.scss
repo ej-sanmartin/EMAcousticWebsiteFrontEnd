@@ -23,7 +23,7 @@ p {
 }
 
 .portfolio-heading-container {
-    @include portfolio-heading-style;
+    @include portfolio-heading-style(.5rem);
 }
 
 .main-image {

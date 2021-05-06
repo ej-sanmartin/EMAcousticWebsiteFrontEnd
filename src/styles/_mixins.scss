@@ -44,11 +44,11 @@
     justify-content: center;
 }
 
-@mixin portfolio-heading-style {
+@mixin portfolio-heading-style($padding) {
     @include center-in-div;
     min-height: 25vh;
-    padding-top: .5rem;
-    padding-bottom: .5rem;;
+    padding-top: $padding;
+    padding-bottom: $padding;
     background-color: #ddd;
 
     div {
