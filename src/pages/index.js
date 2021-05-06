@@ -18,7 +18,7 @@ const Home = () => {
 
     if(isMobile) sal({ disabled: true });
 
-    // in case background image goes blank
+    // in case background image goes blank, just make the text not white
     if(isAndroid){
       let targetElement = document.querySelector("div").querySelector("div").querySelector("div").querySelector("div");
       let openingRemarks = targetElement.querySelectorAll(".home-module--opening-message-container--2NAu_");

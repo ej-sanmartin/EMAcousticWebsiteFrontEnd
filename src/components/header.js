@@ -18,7 +18,7 @@ const Header = () => {
 
     useEffect(() => {
         // for mobile devices, since smooth scroll does not work properly, just brings user to that location on the page without fancy smooth scroll
-        if(isMobile){
+        /* if(isMobile){
             let navElement = document.querySelector("header").querySelectorAll("button.nav-item");
 
             navElement.forEach((button) => {
@@ -31,7 +31,7 @@ const Header = () => {
             })
         }
 
-        iterator = 0;
+        iterator = 0; */
         
     }, []);
 
@@ -45,6 +45,7 @@ const Header = () => {
                                 src='../assets/images/rcLogo.png'
                                 alt='R.C Logo'
                                 className={headerStyles.logo}
+                                placeholder="blurred"
                             />
                         </Link>        
                     </Navbar.Brand>
