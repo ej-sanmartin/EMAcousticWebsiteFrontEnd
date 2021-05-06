@@ -24,6 +24,7 @@ const Header = () => {
             navElement.forEach((button) => {
                 let gatsbyLinkElement = button.children[0].children[0];
                 if(gatsbyLinkElement.className === classNameToFind){
+                    button.removeAttribute("onclick");
                     gatsbyLinkElement.setAttribute("to", linkDestinationIds[iterator]);
                     iterator++;
                 }
