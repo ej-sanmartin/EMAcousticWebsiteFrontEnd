@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { graphql, useStaticQuery, Link } from 'gatsby';
-import { isMobile } from 'react-device-detect';
+import { isMobile, isAndroid } from 'react-device-detect';
 import sal from 'sal.js';
 
 import Layout from '../components/layout';
@@ -15,6 +15,10 @@ const Home = () => {
     document.querySelector('body').scrollTo(0, 0);
 
     if(isMobile) sal({ disabled: true });
+
+    if(isAndroid){
+      document.querySelector("div").querySelector("div").querySelector("div").querySelector("div").querySelector(".home-module--parallax--2Mgdj").style.backgroundAttachment = "scroll";
+    }
   }, []);
 
   const data = useStaticQuery(graphql`
