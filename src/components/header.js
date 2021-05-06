@@ -53,27 +53,27 @@ const Header = () => {
                         <Nav className="justify-content-end" style={{ width: "100%" }}>
                             <Nav.Item as="button">
                                 <Nav.Link>
-                                   <Link className={headerStyles.pageLinks} to="/">Home</Link> 
+                                   <a className={headerStyles.pageLinks} to="/">Home</a> 
                                 </Nav.Link>
                             </Nav.Item>
                             <Nav.Item as="button" onClick={() => scrollTo('#about')}>
                                 <Nav.Link>
-                                   <Link className={`${headerStyles.pageLinks} ${headerStyles.pageLinkSelector}`}>About</Link> 
+                                   <a className={`${headerStyles.pageLinks} ${headerStyles.pageLinkSelector}`}>About</a> 
                                 </Nav.Link>
                             </Nav.Item>
                             <Nav.Item as="button" onClick={() => scrollTo('#portfolio')}>
                                 <Nav.Link>
-                                    <Link className={`${headerStyles.pageLinks} ${headerStyles.pageLinkSelector}`}>Portfolio</Link>
+                                    <a className={`${headerStyles.pageLinks} ${headerStyles.pageLinkSelector}`}>Portfolio</a>
                                 </Nav.Link>
                             </Nav.Item>
                             <Nav.Item as="button" onClick={() => scrollTo('#contact')}>
                                 <Nav.Link>
-                                    <Link className={`${headerStyles.pageLinks} ${headerStyles.pageLinkSelector}`}>Contact</Link>
+                                    <a className={`${headerStyles.pageLinks} ${headerStyles.pageLinkSelector}`}>Contact</a>
                                 </Nav.Link>
                             </Nav.Item>
                             <Nav.Item as="button">
                                 <Nav.Link>
-                                    <Link className={headerStyles.pageLinks} href="tel:860-8888-1111">CALL NOW <FaPhoneAlt className={headerStyles.phoneIcon} style={{ fill: "white" }} />860-888-1111</Link>
+                                    <a className={headerStyles.pageLinks} href="tel:860-8888-1111">CALL NOW <FaPhoneAlt className={headerStyles.phoneIcon} style={{ fill: "white" }} />860-888-1111</a>
                                 </Nav.Link>
                             </Nav.Item>
                         </Nav>
