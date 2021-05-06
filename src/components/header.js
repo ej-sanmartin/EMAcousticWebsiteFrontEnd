@@ -34,17 +34,17 @@ const Header = () => {
                             </Nav.Item>
                             <Nav.Item as="button" onClick={() => scrollTo('#about')}>
                                 <Nav.Link>
-                                   <Link className={headerStyles.pageLinks}>About</Link> 
+                                   <Link className={headerStyles.pageLinks} to="#about">About</Link> 
                                 </Nav.Link>
                             </Nav.Item>
                             <Nav.Item as="button" onClick={() => scrollTo('#portfolio')}>
                                 <Nav.Link>
-                                    <Link className={headerStyles.pageLinks}>Portfolio</Link>
+                                    <Link className={headerStyles.pageLinks} to="#portfolio">Portfolio</Link>
                                 </Nav.Link>
                             </Nav.Item>
                             <Nav.Item as="button" onClick={() => scrollTo('#contact')}>
                                 <Nav.Link>
-                                    <Link className={headerStyles.pageLinks}>Contact</Link>
+                                    <Link className={headerStyles.pageLinks} to="#contact">Contact</Link>
                                 </Nav.Link>
                             </Nav.Item>
                             <Nav.Item as="button">
