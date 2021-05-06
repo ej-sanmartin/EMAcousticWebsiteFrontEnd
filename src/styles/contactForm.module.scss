@@ -31,7 +31,7 @@ label {
     background-clip: padding-box;
     display: flex;
     flex-direction: column;
-    width: 900px;
+    width: 60vw;
     padding: 1.5em;
     padding-top: 1.5em;
     padding-bottom: 1.5em;
@@ -130,7 +130,31 @@ label {
     }
 }
 
+.thank-you-message {
+    flex-basis: 50%;
+    color: $label-colour;
+    text-align: center;
+    font-size: 1.1em;
+    letter-spacing: .15rem;
+    opacity: 0;
+    animation-name: fade-in;
+    animation-duration: 500ms;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+}
+
 .error-text {
     color: $error-colour;
     opacity: .6;
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0.8;
+    }
 }

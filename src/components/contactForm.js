@@ -5,6 +5,16 @@ import { encode } from '../utilities/helpers.js';
 
 import * as contactFormStyles from '../styles/contactForm.module.scss';
 export default class ContactForm extends Component {
+    constructor(props){
+        super(props);
+
+        this.state = { isSubmitted: false };
+    }
+
+    componentDidMount(){
+        this.setState({ isSubmitted: false }); // if you left the page or haven't seen the form, can't possibly have seen it and thus submitted a form
+    }
+
     render() {
         return (
             <div className={this.props.className}>
@@ -36,11 +46,12 @@ export default class ContactForm extends Component {
                                     body: encode({ "form-name": "contact-v1", ...values })
                                 })
                                 .then(() => {
-                                    alert("Successfully Submitted");
+                                    console.log("Successfully Submitted");
+                                    this.setState({ isSubmitted: true });
                                     actions.resetForm();
                                 })
                                 .catch(() => {
-                                    alert("Error detected..");
+                                    console.log("Error submitting form...");
                                 })
                                 .finally(() => actions.setSubmitting(false));
                             }}
@@ -56,7 +67,7 @@ export default class ContactForm extends Component {
                                 return errors;
                             }}
                         >
-                            {() => (
+                            {!this.state.isSubmitted ? () => (
                                 <Form 
                                     className={`${contactFormStyles.formItemLayout} ${contactFormStyles.formContent}`}
                                     name="contact-v1"
@@ -96,7 +107,9 @@ export default class ContactForm extends Component {
 
                                     <button className={contactFormStyles.submitButton} type="submit">Submit</button>
                                 </Form>
-                            )}
+                            ) :
+                                <p className={contactFormStyles.thankYouMessage}>Thank you for your message. <span><br /><br /></span>We will be sure to get back to you as soon as possible.</p>
+                            }
                         </Formik>  
                     </div>
                 </div>
