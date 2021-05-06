@@ -3,7 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { Link } from 'gatsby';
 import { StaticImage } from 'gatsby-plugin-image';
 import scrollTo from 'gatsby-plugin-smoothscroll';
-import { isMobile } from 'react-device-detect';
+import { isIOS } from 'react-device-detect';
 
 import { linkDestinationIds, classNameToFind } from '../assets/content/text.js';
 
@@ -18,20 +18,20 @@ const Header = () => {
 
     useEffect(() => {
         // for mobile devices, since smooth scroll does not work properly, just brings user to that location on the page without fancy smooth scroll
-        /* if(isMobile){
+        if(isIOS){
             let navElement = document.querySelector("header").querySelectorAll("button.nav-item");
 
             navElement.forEach((button) => {
                 let gatsbyLinkElement = button.children[0].children[0];
                 if(gatsbyLinkElement.className === classNameToFind){
-                    // button.removeAttribute("onclick");
+                    button.removeAttribute("onclick");
                     button.setAttribute("to", linkDestinationIds[iterator]);
                     iterator++;
                 }
             })
         }
 
-        iterator = 0; */
+        iterator = 0;
         
     }, []);
 
