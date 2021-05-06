@@ -30,8 +30,14 @@ const serviceCardEntries = [
     },
 ]
 
+const linkDestinationIds = ["#about", "#portfolio", "#contact"];
+
+const classNameToFind = "header-module--page-links--1C1j4 header-module--page-link-selector--1UsLN";
+
 export {
     aboutBlurb,
     footerCompanySummary,
     serviceCardEntries,
+    linkDestinationIds,
+    classNameToFind
 };

@@ -1,8 +1,11 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Link } from 'gatsby';
 import { StaticImage } from 'gatsby-plugin-image';
 import scrollTo from 'gatsby-plugin-smoothscroll';
+import { isMobile } from 'react-device-detect';
+
+import { linkDestinationIds, classNameToFind } from '../assets/content/text.js';
 
 import { Navbar, Nav, Container } from 'react-bootstrap';
 
@@ -11,6 +14,26 @@ import { FaPhoneAlt } from '@react-icons/all-files/fa/FaPhoneAlt';
 import * as headerStyles from '../styles/header.module.scss';
 
 const Header = () => {
+    let iterator = 0;
+
+    useEffect(() => {
+        // for mobile devices, since smooth scroll does not work properly, just brings user to that location on the page without fancy smooth scroll
+        if(isMobile){
+            let navElement = document.querySelector("header").querySelectorAll("button.nav-item");
+
+            navElement.forEach((button) => {
+                let gatsbyLinkElement = button.children[0].children[0];
+                if(gatsbyLinkElement.className === classNameToFind){
+                    gatsbyLinkElement.setAttribute("to", linkDestinationIds[iterator]);
+                    iterator++;
+                }
+            })
+        }
+
+        iterator = 0;
+        
+    }, []);
+
     return (
         <header id="top" className={headerStyles.navbar}>
             <Navbar collapseOnSelect expand="sm" style={{ padding: "0" }}>
@@ -25,7 +48,7 @@ const Header = () => {
                         </Link>        
                     </Navbar.Brand>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" className={headerStyles.responsiveHamburger} />
-                    <Navbar.Collapse id="responsive-navbar-nav" className={headerStyles.responsiveCollapse} >
+                    <Navbar.Collapse id="responsive-navbar-nav" className={headerStyles.responsiveCollapse}>
                         <Nav className="justify-content-end" style={{ width: "100%" }}>
                             <Nav.Item as="button">
                                 <Nav.Link>
@@ -34,17 +57,17 @@ const Header = () => {
                             </Nav.Item>
                             <Nav.Item as="button" onClick={() => scrollTo('#about')}>
                                 <Nav.Link>
-                                   <Link className={headerStyles.pageLinks} to="#about">About</Link> 
+                                   <Link className={`${headerStyles.pageLinks} ${headerStyles.pageLinkSelector}`}>About</Link> 
                                 </Nav.Link>
                             </Nav.Item>
                             <Nav.Item as="button" onClick={() => scrollTo('#portfolio')}>
                                 <Nav.Link>
-                                    <Link className={headerStyles.pageLinks} to="#portfolio">Portfolio</Link>
+                                    <Link className={`${headerStyles.pageLinks} ${headerStyles.pageLinkSelector}`}>Portfolio</Link>
                                 </Nav.Link>
                             </Nav.Item>
                             <Nav.Item as="button" onClick={() => scrollTo('#contact')}>
                                 <Nav.Link>
-                                    <Link className={headerStyles.pageLinks} to="#contact">Contact</Link>
+                                    <Link className={`${headerStyles.pageLinks} ${headerStyles.pageLinkSelector}`}>Contact</Link>
                                 </Nav.Link>
                             </Nav.Item>
                             <Nav.Item as="button">
