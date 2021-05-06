@@ -6,18 +6,30 @@ import sal from 'sal.js';
 import Layout from '../components/layout';
 import ContactForm from '../components/contactForm';
 
-import { aboutBlurb, serviceCardEntries } from '../assets/content/text.js';
+import { aboutBlurb, serviceCardEntries, messagesClassNames } from '../assets/content/text.js';
 
 import * as homeStyles from '../styles/home.module.scss';
 
 const Home = () => {
+  let iterator = 0;
+
   useEffect(() => {
     document.querySelector('body').scrollTo(0, 0);
 
     if(isMobile) sal({ disabled: true });
 
+    // in case background image goes blank
     if(isAndroid){
-      document.querySelector("div").querySelector("div").querySelector("div").querySelector("div").querySelector(".home-module--parallax--2Mgdj").style.backgroundAttachment = "scroll";
+      let targetElement = document.querySelector("div").querySelector("div").querySelector("div").querySelector("div");
+      let openingRemarks = targetElement.querySelectorAll(".home-module--opening-message-container--2NAu_");
+      openingRemarks.forEach((message) => {
+        message.querySelector(`.${messagesClassNames[iterator]}`).style.color = "gray";
+        iterator++;
+        message.querySelector(`.${messagesClassNames[iterator]}`).style.color = "gray";
+      });
+
+      targetElement.querySelector(".home-module--parallax--2Mgdj").style.backgroundAttachment = "scroll";
+      iterator = 0;
     }
   }, []);
 

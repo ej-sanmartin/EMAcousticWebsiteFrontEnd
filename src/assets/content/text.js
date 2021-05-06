@@ -32,6 +32,8 @@ const serviceCardEntries = [
 
 const linkDestinationIds = ["#about", "#portfolio", "#contact"];
 
+const messagesClassNames = ["home-module--first-opening-phrase--1TM-k", "home-module--second-opening-phrase--3eS_S"];
+
 const classNameToFind = "header-module--page-links--1C1j4 header-module--page-link-selector--1UsLN";
 
 export {
@@ -39,5 +41,6 @@ export {
     footerCompanySummary,
     serviceCardEntries,
     linkDestinationIds,
+    messagesClassNames,
     classNameToFind
 };
