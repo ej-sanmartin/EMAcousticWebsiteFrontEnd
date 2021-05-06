@@ -83,6 +83,10 @@
         bottom: -5% !important;
     }
 
+    .parallax {
+        background-attachment: inherit;
+    }
+
     .about-container, .services-container, .sub-heading-text-styles {
         padding: .1rem .25rem !important;
     }
