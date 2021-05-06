@@ -21,11 +21,59 @@
 
 @media only screen and (max-width: 600px) {
     .header-box {
-        height: 20vh !important;
+        height: 25vh !important;
     }
 
     .portfolio-heading-container {
         min-height: 16vh !important;
+    }
+
+    .project-details {
+        margin: 2em auto !important;
+        text-align: start !important;
+        margin-bottom: 6em !important;
+
+        h1 {
+            font-size: 2.25em !important;
+        }
+    }
+
+    ul {
+        li {
+            p {
+                text-align: left !important; 
+            }
+        }
+    }
+
+    div {
+        p {
+            text-align: left !important;
+        }
+    }
+
+    .gallery-header {
+        font-size: 1.3em !important;
+        margin-top: 3em !important;
+    }
+
+    .gallery-line {
+        width: 100% !important;
+    }
+
+    .gallery {
+        width: 100% !important;
+        margin-bottom: 2em !important;
+
+        div {
+            height: 275px !important;
+        }
+    }
+
+    .return-button {
+        p {
+            text-align: center !important;
+        }
     }
 }
 
