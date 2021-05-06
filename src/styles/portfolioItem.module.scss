@@ -2,11 +2,31 @@
 @import './variables';
 
 @media only screen and (max-width: 1100px) {
-    
+    .header-box {
+        height: 14vh !important;
+    }
+
+    .portfolio-heading-container {
+        min-height: 14vh !important;
+    }
+
+    .main-image {
+        max-height: 30vh !important;
+    }
+
+    .gallery {
+        margin-bottom: 1em !important;
+    }
 }
 
 @media only screen and (max-width: 600px) {
+    .header-box {
+        height: 20vh !important;
+    }
 
+    .portfolio-heading-container {
+        min-height: 16vh !important;
+    }
 }
 
 .header-box {
