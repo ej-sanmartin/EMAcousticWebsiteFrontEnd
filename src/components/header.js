@@ -51,27 +51,27 @@ const Header = () => {
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" className={headerStyles.responsiveHamburger} />
                     <Navbar.Collapse id="responsive-navbar-nav" className={headerStyles.responsiveCollapse}>
                         <Nav className="justify-content-end" style={{ width: "100%" }}>
-                            <Nav.Item as="button">
+                            <Nav.Item as="a">
                                 <Nav.Link>
                                    <a className={headerStyles.pageLinks} to="/">Home</a> 
                                 </Nav.Link>
                             </Nav.Item>
-                            <Nav.Item as="button" onClick={() => scrollTo('#about')}>
+                            <Nav.Item as="a" onClick={() => scrollTo('#about')}>
                                 <Nav.Link>
                                    <a className={`${headerStyles.pageLinks} ${headerStyles.pageLinkSelector}`}>About</a> 
                                 </Nav.Link>
                             </Nav.Item>
-                            <Nav.Item as="button" onClick={() => scrollTo('#portfolio')}>
+                            <Nav.Item as="a" onClick={() => scrollTo('#portfolio')}>
                                 <Nav.Link>
                                     <a className={`${headerStyles.pageLinks} ${headerStyles.pageLinkSelector}`}>Portfolio</a>
                                 </Nav.Link>
                             </Nav.Item>
-                            <Nav.Item as="button" onClick={() => scrollTo('#contact')}>
+                            <Nav.Item as="a" onClick={() => scrollTo('#contact')}>
                                 <Nav.Link>
                                     <a className={`${headerStyles.pageLinks} ${headerStyles.pageLinkSelector}`}>Contact</a>
                                 </Nav.Link>
                             </Nav.Item>
-                            <Nav.Item as="button">
+                            <Nav.Item as="a">
                                 <Nav.Link>
                                     <a className={headerStyles.pageLinks} href="tel:860-8888-1111">CALL NOW <FaPhoneAlt className={headerStyles.phoneIcon} style={{ fill: "white" }} />860-888-1111</a>
                                 </Nav.Link>
