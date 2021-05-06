@@ -33,7 +33,7 @@ export default class ContactForm extends Component {
                                 fetch("/", {
                                     method: "POST",
                                     headers: { "Content-Type": "application/x-www-form-urlencoded" },
-                                    body: encode({ "form-name": "contact-demo", ...values })
+                                    body: encode({ "form-name": "contact-v1", ...values })
                                 })
                                 .then(() => {
                                     alert("Successfully Submitted");
@@ -59,11 +59,11 @@ export default class ContactForm extends Component {
                             {() => (
                                 <Form 
                                     className={`${contactFormStyles.formItemLayout} ${contactFormStyles.formContent}`}
-                                    name="contact v1"
+                                    name="contact-v1"
                                     data-netlify={true}
                                     data-netlify-honeypots="bot-field"
                                 >
-                                    <input type="hidden" name="contact" value="contact v1" />
+                                    <input type="hidden" name="contact" value="contact-v1" />
                                     <p hidden>
                                         <label>
                                             Don't fill this out: <input name="bot-field" />
