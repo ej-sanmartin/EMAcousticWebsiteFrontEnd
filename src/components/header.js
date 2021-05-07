@@ -37,17 +37,17 @@ const Header = () => {
                                 </Nav.Link>
                             </Nav.Item>
                             <Nav.Item as="button" onClick={() => scrollTo('#about')}>
-                                <Nav.Link className={headerStyles.navLinkATag} as="a" {...createLinkProps('#about')}>
+                                <Nav.Link {...createLinkProps('#about')}>
                                     <a className={`${headerStyles.pageLinks} ${headerStyles.pageLinkSelector}`}>About</a>
                                 </Nav.Link>
                             </Nav.Item>
                             <Nav.Item as="button" onClick={() => scrollTo('#portfolio')}>
-                                <Nav.Link className={headerStyles.navLinkATag} as="a" {...createLinkProps('#portfolio')}>
+                                <Nav.Link {...createLinkProps('#portfolio')}>
                                     <a className={`${headerStyles.pageLinks} ${headerStyles.pageLinkSelector}`}>Portfolio</a>
                                 </Nav.Link>
                             </Nav.Item>
                             <Nav.Item as="button" onClick={() => scrollTo('#contact')}>
-                                <Nav.Link className={headerStyles.navLinkATag} as="a" {...createLinkProps('#contact')}>
+                                <Nav.Link {...createLinkProps('#contact')}>
                                     <a className={`${headerStyles.pageLinks} ${headerStyles.pageLinkSelector}`}>Contact</a>
                                 </Nav.Link>
                             </Nav.Item>
