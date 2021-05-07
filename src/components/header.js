@@ -2,23 +2,23 @@ import React, { useEffect } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Link } from 'gatsby';
 import { StaticImage } from 'gatsby-plugin-image';
-import scrollTo from 'gatsby-plugin-smoothscroll';
 import { isIOS } from 'react-device-detect';
-
+import { detect } from 'detect-browser';
+import scrollTo from 'gatsby-plugin-smoothscroll';
 import { linkDestinationIds, classNameToFind } from '../assets/content/text.js';
-
 import { Navbar, Nav, Container } from 'react-bootstrap';
-
 import { FaPhoneAlt } from '@react-icons/all-files/fa/FaPhoneAlt';
-
 import * as headerStyles from '../styles/header.module.scss';
 
 const Header = () => {
     let iterator = 0;
+    const browser = detect();
 
     useEffect(() => {
         // for mobile devices, since smooth scroll does not work properly, just brings user to that location on the page without fancy smooth scroll
         if(isIOS){
+            window.__forceSmoothScrollPolyfill__ = true;
+
             let navElement = document.querySelector("header").querySelectorAll("button.nav-item");
 
             navElement.forEach((button) => {
@@ -57,9 +57,9 @@ const Header = () => {
                                    <a className={headerStyles.pageLinks} to="/">Home</a> 
                                 </Nav.Link>
                             </Nav.Item>
-                            <Nav.Item as="button" onClick={() => document.querySelector("#end").scrollIntoView({ behavior: 'smooth' })}>
+                            <Nav.Item as="button" onClick={() => scrollTo('#about')}>
                                 <Nav.Link>
-                                   <a className={`${headerStyles.pageLinks} ${headerStyles.pageLinkSelector}`}>About</a> 
+                                   {!browser && browser.name === "safari" ? <a className={`${headerStyles.pageLinks} ${headerStyles.pageLinkSelector}`}>About</a> : <a className={`${headerStyles.pageLinks} ${headerStyles.pageLinkSelector}`} href="#about">About</a>}
                                 </Nav.Link>
                             </Nav.Item>
                             <Nav.Item as="button" onClick={() => scrollTo('#portfolio')}>

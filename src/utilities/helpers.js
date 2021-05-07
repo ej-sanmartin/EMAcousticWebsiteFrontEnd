@@ -6,5 +6,5 @@ const encode = (data) => {
 }
 
 export {
-    encode,
+    encode
 };
