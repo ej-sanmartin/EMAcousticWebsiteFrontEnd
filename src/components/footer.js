@@ -20,7 +20,7 @@ const Footer = () => {
     let year = today.getFullYear();
 
     return (
-        <footer className={footerStyles.container}>
+        <footer id="end" className={footerStyles.container}>
             <Container>
                 <Row className={footerStyles.footerInfo}>
                     <Col sm={4}>
