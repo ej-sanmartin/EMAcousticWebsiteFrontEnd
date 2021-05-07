@@ -34,6 +34,66 @@
     }
 }
 
+/* For mobile iphones >X, in landscape orientation */
+@media only screen
+and (min-device-width: 669px)
+and (max-device-width: 820px)
+and (orientation: landscape)
+and (-webkit-device-pixel-ratio: 3) {
+    .opening-message-container {
+        margin-bottom: -1rem;
+        width: 100%;
+        padding-top: 11.5em;
+        padding-bottom: 15rem;
+
+        h2 {
+            font-size: 2em !important;
+            padding-top: 2rem;
+        }
+
+        h3 {
+            font-size: 1em !important;
+            margin-top: -1rem;
+        }
+
+        p {
+            font-size: .9rem !important;
+            text-align: center !important;
+            margin-bottom: 1em !important;
+        }
+    }
+}
+
+/* For mobile iphones <8, in landscape orientation */
+@media only screen
+and (min-device-width: 319px)
+and (max-device-width: 668px)
+and (orientation: landscape)
+and (-webkit-device-pixel-ratio: 2) {
+    .opening-message-container {
+        margin-bottom: -1rem;
+        width: 100%;
+        padding-top: 11.5em;
+        padding-bottom: 15rem;
+
+        h2 {
+            font-size: 2em !important;
+            padding-top: 2rem;
+        }
+
+        h3 {
+            font-size: 1em !important;
+            margin-top: -1rem;
+        }
+
+        p {
+            font-size: .9rem !important;
+            text-align: center !important;
+            margin-bottom: 1em !important;
+        }
+    }
+}
+
 .opening-image {
     position: absolute;
     z-index: -10;
