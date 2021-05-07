@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
-
 import { encode } from '../utilities/helpers.js';
-
 import * as contactFormStyles from '../styles/contactForm.module.scss';
 export default class ContactForm extends Component {
     constructor(props){

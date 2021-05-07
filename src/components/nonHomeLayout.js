@@ -1,8 +1,6 @@
 import React from 'react';
-
 import NonHomeHeader from './nonHomeHeader';
 import NonHomeFooter from './nonHomeFooter';
-
 import '../styles/index.scss';
 
 const NonHomeLayout = (props) => {

@@ -1,8 +1,6 @@
 import React from 'react';
 import { Link } from 'gatsby';
-
 import NonHomeLayout from '../components/nonHomeLayout';
-
 import * as errorPageStyles from '../styles/errorPage.module.scss';
 
 const NotFound = () => {

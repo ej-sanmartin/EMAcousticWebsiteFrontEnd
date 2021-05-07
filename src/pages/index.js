@@ -2,12 +2,9 @@ import React, { useEffect } from "react";
 import { graphql, useStaticQuery, Link } from 'gatsby';
 import { isMobile, isAndroid } from 'react-device-detect';
 import sal from 'sal.js';
-
 import Layout from '../components/layout';
 import ContactForm from '../components/contactForm';
-
 import { aboutBlurb, serviceCardEntries, messagesClassNames } from '../assets/content/text.js';
-
 import * as homeStyles from '../styles/home.module.scss';
 
 const Home = () => {

@@ -29,13 +29,43 @@ and (-webkit-min-device-pixel-ratio: 2) {
     }
 }
 
-/* For mobile phones, in landscape orientation */
+/* For mobile iphones <8, in landscape orientation */
 @media only screen
 and (min-device-width: 319px)
-and (max-device-width: 897px)
+and (max-device-width: 668px)
 and (orientation: landscape)
-and (-webkit-min-device-pixel-ratio: 2)
-and (-webkit-max-device-pixel-ratio: 3) {
+and (-webkit-device-pixel-ratio: 2) {
+
+    .navbar-layout {
+        display: flex;
+        justify-content: center;
+        margin-top: -13.5em;
+    }
+
+    .responsive-collapse {
+        background-color: rgba(0, 0, 0, 0.0);
+        padding: 1rem auto;
+        margin-top: 0;
+        transition: none !important;
+    }
+
+    .logo {
+        max-width: 80px !important;
+        max-width:  80px !important;
+    }
+
+    .page-links {
+        letter-spacing: .1em;
+        font-size: .48em;
+    }
+}
+
+/* For mobile iphones >X, in landscape orientation */
+@media only screen
+and (min-device-width: 669px)
+and (max-device-width: 820px)
+and (orientation: landscape)
+and (-webkit-device-pixel-ratio: 3) {
 
     .navbar-layout {
         display: flex;

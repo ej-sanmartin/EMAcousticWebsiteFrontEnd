@@ -157,13 +157,12 @@
     }
 }
 
-/* For mobile phones, in landscape orientation */
+/* For mobile iphones <8, in landscape orientation */
 @media only screen
 and (min-device-width: 319px)
-and (max-device-width: 897px)
+and (max-device-width: 668px)
 and (orientation: landscape)
-and (-webkit-min-device-pixel-ratio: 2)
-and (-webkit-max-device-pixel-ratio: 3) {
+and (-webkit-device-pixel-ratio: 2) {
     
     .opening-message-container {
         margin-top: 2em;
@@ -176,6 +175,50 @@ and (-webkit-max-device-pixel-ratio: 3) {
     .first-opening-phrase, .second-opening-phrase {
         font-size: 1.25em !important;
         max-width: 30ch !important;
+    }
+
+    .about-container {
+        max-width: 100vw;
+        padding-left: 2em;
+        padding-right: 2em;
+        text-align: center;
+    }
+
+    .portfolio-heading-container {
+        min-height: 40vh !important;
+        padding-top: 1.5em !important;
+    }
+
+    .content-container {
+        min-height: 150vh !important;
+        iframe {
+            min-height: 160vh !important;
+        }
+    }
+}
+
+/* For mobile iphones >X, in landscape orientation */
+@media only screen
+and (min-device-width: 669px)
+and (max-device-width: 820px)
+and (orientation: landscape)
+and (-webkit-device-pixel-ratio: 3) {
+    
+    .opening-message-container {
+        margin-top: 2em;
+
+        &::after {
+            bottom: -2% !important;
+        }
+    }
+
+    .first-opening-phrase, .second-opening-phrase {
+        font-size: 1.25em !important;
+        max-width: 30ch !important;
+    }
+
+    .about-container {
+        text-align: center;
     }
 
     .portfolio-heading-container {

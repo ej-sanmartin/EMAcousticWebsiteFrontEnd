@@ -34,6 +34,36 @@
     }
 }
 
+/* For mobile iphones >X, in landscape orientation */
+@media only screen
+and (min-device-width: 669px)
+and (max-device-width: 820px)
+and (orientation: landscape)
+and (-webkit-device-pixel-ratio: 3) {
+    footer {
+        clip-path: polygon(0 3%, 100% 0, 100% 100%, 0% 100%) !important;
+    }
+}
+
+/* For mobile iphones <8, in landscape orientation */
+@media only screen
+and (min-device-width: 319px)
+and (max-device-width: 668px)
+and (orientation: landscape)
+and (-webkit-device-pixel-ratio: 2) {
+    footer {
+        clip-path: polygon(0 2.5%, 100% 0, 100% 100%, 0% 100%) !important;
+    }
+
+    .footer-info {
+        flex-direction: column !important;
+
+        .col-sm-4 {
+            min-width: 100% !important;
+        }
+    }
+}
+
 footer {
     z-index: 10;
     clip-path: polygon(0 8%, 100% 0, 100% 100%, 0% 100%);

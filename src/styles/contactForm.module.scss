@@ -41,6 +41,33 @@
     }
 }
 
+/* For mobile iphones >X, in landscape orientation */
+@media only screen
+and (min-device-width: 669px)
+and (max-device-width: 820px)
+and (orientation: landscape)
+and (-webkit-device-pixel-ratio: 3) {
+
+    .contact-form-layout {
+        width: 90vw !important;
+    }
+}
+
+/* For mobile iphones <8, in landscape orientation */
+@media only screen
+and (min-device-width: 319px)
+and (max-device-width: 668px)
+and (orientation: landscape)
+and (-webkit-device-pixel-ratio: 2) {
+    .form-item-layout, .inner-form-layout, .contact-message {
+        flex: 100%;;
+    }
+
+    .contact-form-layout {
+        width: 90vw !important;
+    }
+}
+
 label {
     color: $label-colour;
 }

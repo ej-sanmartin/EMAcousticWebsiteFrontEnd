@@ -1,17 +1,12 @@
 import React from 'react';
-
 import * as footerStyles from '../styles/footer.module.scss';
-
 import { footerCompanySummary } from '../assets/content/text.js';
-
 import { Row, Col, Container, Nav } from 'react-bootstrap';
-
 import { IconContext } from '@react-icons/all-files';
 import { HiOutlinePhone } from '@react-icons/all-files/hi/HiOutlinePhone';
 import { AiOutlineHome } from '@react-icons/all-files/ai/AiOutlineHome';
 import { HiOutlineMail } from '@react-icons/all-files/hi/HiOutlineMail';
 import { BiUpArrow } from '@react-icons/all-files/bi/BiUpArrow';
-
 import scrollTo from 'gatsby-plugin-smoothscroll';
 
 const NonHomeFooter = () => {
