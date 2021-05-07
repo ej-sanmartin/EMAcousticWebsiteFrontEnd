@@ -8,11 +8,16 @@ import { AiOutlineHome } from '@react-icons/all-files/ai/AiOutlineHome';
 import { HiOutlineMail } from '@react-icons/all-files/hi/HiOutlineMail';
 import { BiUpArrow } from '@react-icons/all-files/bi/BiUpArrow';
 import scrollTo from 'gatsby-plugin-smoothscroll';
+import { isIOS } from 'react-device-detect';
+import { detect } from 'detect-browser';
 
 const Footer = () => {
     // keeps copyright year current forever
     let today = new Date();
     let year = today.getFullYear();
+
+    const browser = detect();
+    const createLinkProps = (id) => browser.name === `safari` ? { href: id } : {};
 
     return (
         <footer className={footerStyles.container}>
@@ -43,7 +48,7 @@ const Footer = () => {
                 </div>
                 <div className={footerStyles.topButtonContainer}>
                     <Nav.Item style={{ marginBottom: "1em" }} as="button" onClick={() => scrollTo('#top')}>
-                        <Nav.Link>
+                        <Nav.Link {...createLinkProps('#top')}>
                             <IconContext.Provider value={{ size: '3em', color: 'white' }}>
                                 <BiUpArrow style={{ fill: "white" }} />
                             </IconContext.Provider>
