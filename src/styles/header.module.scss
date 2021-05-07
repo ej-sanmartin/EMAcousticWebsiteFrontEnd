@@ -123,6 +123,12 @@ button {
     }
 }
 
+.nav-link-a-tag {
+    a:focus, a:active {
+        outline: none;
+    }
+}
+
 .page-links {
     cursor: pointer;
     color: $lighter-font-colour;
