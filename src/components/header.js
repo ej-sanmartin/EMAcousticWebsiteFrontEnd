@@ -10,9 +10,7 @@ import { Navbar, Nav, Container } from 'react-bootstrap';
 import { FaPhoneAlt } from '@react-icons/all-files/fa/FaPhoneAlt';
 import * as headerStyles from '../styles/header.module.scss';
 
-(function(w, d, undefined) {
-    'use strict';
-  
+function initialize(w, d, undefined) {
     /*
      * aliases
      * w: window global object
@@ -22,13 +20,7 @@ import * as headerStyles from '../styles/header.module.scss';
   
     // polyfill
     function polyfill(overrideBrowserImplementation) {
-      // return when scrollBehavior interface is supported
-      if ('scrollBehavior' in d.documentElement.style) {
-        if (!overrideBrowserImplementation) {
-          return;
-        }
-      }
-  
+     
       /*
        * globals
        */
@@ -329,15 +321,15 @@ import * as headerStyles from '../styles/header.module.scss';
         });
       };
     }
-  
-    polyfill(true)
-  })(window, document);
+  }
 
 const Header = () => {
     let iterator = 0;
     const browser = detect();
 
     useEffect(() => {
+        initialize(window, document);
+
         // for mobile devices, since smooth scroll does not work properly, just brings user to that location on the page without fancy smooth scroll
         if(isIOS){
             window.__forceSmoothScrollPolyfill__ = true;
