@@ -43,6 +43,23 @@ and (-webkit-device-pixel-ratio: 3) {
     footer {
         clip-path: polygon(0 3%, 100% 0, 100% 100%, 0% 100%) !important;
     }
+
+    .footer-info {
+        flex-direction: column !important;
+
+        div {
+            max-width: 80% !important;
+            margin-top: 2em;
+        }
+    }
+
+    .copyright {
+        margin-top: 2em;
+    }
+
+    .top-button-container {
+        margin-bottom: 1em !important;
+    }
 }
 
 /* For mobile iphones <8, in landscape orientation */
@@ -58,9 +75,18 @@ and (-webkit-device-pixel-ratio: 2) {
     .footer-info {
         flex-direction: column !important;
 
-        .col-sm-4 {
-            min-width: 100% !important;
+        div {
+            max-width: 100% !important;
+            margin-top: 2em;
         }
+    }
+
+    .copyright {
+        margin-top: 2em;
+    }
+
+    .top-button-container {
+        margin-bottom: 2em !important;
     }
 }
 
