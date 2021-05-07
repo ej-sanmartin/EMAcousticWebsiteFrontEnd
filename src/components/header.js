@@ -374,7 +374,7 @@ const Header = () => {
                             </Nav.Item>
                             <Nav.Item as="button" onClick={() => scrollTo('#about')}>
                                 <Nav.Link>
-                                   {!browser && browser.name === "safari" ? <a className={`${headerStyles.pageLinks} ${headerStyles.pageLinkSelector}`}>About</a> : <a className={`${headerStyles.pageLinks} ${headerStyles.pageLinkSelector}`} href="#about">About</a>}
+                                    <a className={`${headerStyles.pageLinks} ${headerStyles.pageLinkSelector}`}>About</a>
                                 </Nav.Link>
                             </Nav.Item>
                             <Nav.Item as="button" onClick={() => scrollTo('#portfolio')}>
