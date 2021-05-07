@@ -81,6 +81,113 @@
     }
 }
 
+/* For mobile iphones >X, in landscape orientation */
+@media only screen
+and (min-device-width: 669px)
+and (max-device-width: 820px)
+and (orientation: landscape)
+and (-webkit-device-pixel-ratio: 3) {
+    .header-box {
+        height: 25vh !important;
+    }
+
+    .portfolio-heading-container {
+        padding-top: 1.5em !important;
+    }
+
+    .main-image {
+        max-height: 70vh !important;
+    }
+
+    .project-details {
+        margin: 3em auto !important;
+    }
+
+    .gallery-line {
+        width: 90% !important
+    }
+
+    .gallery {
+        width: 75% !important;
+        margin-bottom: 3em !important;
+
+        div {
+            height: 270px !important;
+        }
+    }
+}
+
+/* For mobile iphones <8, in landscape orientation */
+@media only screen
+and (min-device-width: 319px)
+and (max-device-width: 668px)
+and (orientation: landscape)
+and (-webkit-device-pixel-ratio: 2) {
+    .header-box {
+        height: 25vh !important;
+    }
+
+    .portfolio-heading-container {
+        padding-top: 1.5em !important;
+
+        div {
+            h3 {
+                font-size: 1.5em !important;
+            }
+
+            p {
+                font-size: .9em !important;
+            }
+        }
+    }
+
+    .main-image {
+        max-height: 70vh !important;
+    }
+
+    .project-details {
+        margin: 2em auto !important;
+        text-align: start !important;
+        margin-bottom: 4em !important;
+
+        h1 {
+            font-size: 2em !important;
+        }
+    }
+
+    ul {
+        li {
+            p {
+                font-size: 1.25em !important;
+            }
+        }
+    }
+
+    div {
+        p {
+            font-size: 1.25em !important;
+        }
+    }
+
+    .gallery-line {
+        width: 90% !important
+    }
+
+    .gallery {
+        width: 75% !important;
+        margin-bottom: 3em !important;
+
+        div {
+            height: 270px !important;
+        }
+    }
+
+    .return-button {
+        padding-left: 43% !important;
+        padding-right: 43% !important;
+    }
+}
+
 .header-box {
     width: 100vw;
     height: 25vh;
