@@ -69,7 +69,7 @@
     }
 }
 
-/* For mobile phones */
+/* For mobile phones, in portrait orientation */
 @media only screen and (max-width: 600px) {
     * {
         font-size: 1em;
@@ -153,6 +153,40 @@
         min-height: 140vh !important;
         iframe {
             min-height: 150vh !important;
+        }
+    }
+}
+
+/* For mobile phones, in landscape orientation */
+@media only screen
+and (min-device-width: 319px)
+and (max-device-width: 897px)
+and (orientation: landscape)
+and (-webkit-min-device-pixel-ratio: 2)
+and (-webkit-max-device-pixel-ratio: 3) {
+    
+    .opening-message-container {
+        margin-top: 2em;
+
+        &::after {
+            bottom: -2% !important;
+        }
+    }
+
+    .first-opening-phrase, .second-opening-phrase {
+        font-size: 1.25em !important;
+        max-width: 30ch !important;
+    }
+
+    .portfolio-heading-container {
+        min-height: 40vh !important;
+        padding-top: 1.5em !important;
+    }
+
+    .content-container {
+        min-height: 150vh !important;
+        iframe {
+            min-height: 170vh !important;
         }
     }
 }

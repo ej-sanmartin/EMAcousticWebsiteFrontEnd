@@ -57,7 +57,7 @@ const Header = () => {
                                    <a className={headerStyles.pageLinks} to="/">Home</a> 
                                 </Nav.Link>
                             </Nav.Item>
-                            <Nav.Item as="button" onClick={() => scrollTo('#about')}>
+                            <Nav.Item as="button" onClick={() => document.querySelector("#about").scrollIntoView({ behavior: 'smooth' })}>
                                 <Nav.Link>
                                    <a className={`${headerStyles.pageLinks} ${headerStyles.pageLinkSelector}`}>About</a> 
                                 </Nav.Link>
