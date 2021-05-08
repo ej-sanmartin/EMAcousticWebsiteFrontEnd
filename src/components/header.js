@@ -2,6 +2,7 @@ import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Link } from 'gatsby';
 import { StaticImage } from 'gatsby-plugin-image';
+import { detect } from 'detect-browser';
 import { isIOS } from 'react-device-detect';
 import scrollTo from 'gatsby-plugin-smoothscroll';
 import { Navbar, Nav, Container } from 'react-bootstrap';
@@ -9,7 +10,8 @@ import { FaPhoneAlt } from '@react-icons/all-files/fa/FaPhoneAlt';
 import * as headerStyles from '../styles/header.module.scss';
 
 const Header = () => {
-    const createLinkProps = (id) => isIOS ? id : null;
+    const browser = detect();
+    const createLinkProps = (id) => isIOS || browser.name === 'safari' ? id : null;
 
     return (
         <header id="top" className={headerStyles.navbar}>
@@ -34,9 +36,12 @@ const Header = () => {
                                 </Nav.Link>
                             </Nav.Item>
                             <Nav.Item onClick={() => scrollTo('#about')}>
-                                <Link as="a" className={headerStyles.pageLinks} to={createLinkProps('/#about')}>
-                                    About  
-                                </Link> 
+                                <Nav.Link>
+                                    <Link as="a" className={headerStyles.pageLinks} to={createLinkProps('/#about')}>
+                                        About  
+                                    </Link>                 
+                                </Nav.Link>
+
                             </Nav.Item>
                             <Nav.Item onClick={() => scrollTo('#portfolio')}>
                                 <Link as="a" className={headerStyles.pageLinks} to={createLinkProps('/#portfolio')}>
