@@ -46,7 +46,7 @@ const Footer = () => {
                 <div className={footerStyles.topButtonContainer}>
                     <Nav.Item style={{ marginBottom: "1em" }} as="a" onClick={() => scrollTo('#top')}>
                         <Nav.Link>
-                            <Link to={createLinkProps('/#portfolio')}>
+                            <Link to={createLinkProps('/#top')}>
                                 <IconContext.Provider value={{ size: '3em', color: 'white' }}>
                                     <BiUpArrow style={{ fill: "white" }} />
                                 </IconContext.Provider>
