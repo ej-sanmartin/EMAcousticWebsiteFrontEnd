@@ -1,3 +1,6 @@
+import { detect } from 'detect-browser';
+import { isIOS } from 'react-device-detect';
+
 // Helper function to format submissions the way Netlify expects it
 const encode = (data) => {
     return Object.keys(data)
@@ -5,6 +8,10 @@ const encode = (data) => {
     .join("&");
 }
 
+const browser = detect();
+const createLinkProps = (id) => isIOS || browser.name === 'safari' ? id : null;
+
 export {
-    encode
+    encode,
+    createLinkProps
 };

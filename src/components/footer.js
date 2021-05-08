@@ -1,5 +1,6 @@
 import React from 'react';
 import * as footerStyles from '../styles/footer.module.scss';
+import { Link } from 'gatsby';
 import { footerCompanySummary } from '../assets/content/text.js';
 import { Row, Col, Container, Nav } from 'react-bootstrap';
 import { IconContext } from '@react-icons/all-files';
@@ -8,15 +9,12 @@ import { AiOutlineHome } from '@react-icons/all-files/ai/AiOutlineHome';
 import { HiOutlineMail } from '@react-icons/all-files/hi/HiOutlineMail';
 import { BiUpArrow } from '@react-icons/all-files/bi/BiUpArrow';
 import scrollTo from 'gatsby-plugin-smoothscroll';
-import { detect } from 'detect-browser';
+import { createLinkProps } from '../utilities/helpers.js';
 
 const Footer = () => {
     // keeps copyright year current forever
     let today = new Date();
     let year = today.getFullYear();
-
-    const browser = detect();
-    const createLinkProps = (id) => browser.name === `safari` ? { href: id } : {};
 
     return (
         <footer className={footerStyles.container}>
@@ -47,10 +45,12 @@ const Footer = () => {
                 </div>
                 <div className={footerStyles.topButtonContainer}>
                     <Nav.Item style={{ marginBottom: "1em" }} as="a" onClick={() => scrollTo('#top')}>
-                        <Nav.Link as="a" {...createLinkProps('#top')}>
-                            <IconContext.Provider value={{ size: '3em', color: 'white' }}>
-                                <BiUpArrow style={{ fill: "white" }} />
-                            </IconContext.Provider>
+                        <Nav.Link>
+                            <Link to={createLinkProps('/#portfolio')}>
+                                <IconContext.Provider value={{ size: '3em', color: 'white' }}>
+                                    <BiUpArrow style={{ fill: "white" }} />
+                                </IconContext.Provider>
+                            </Link>
                         </Nav.Link>
                     </Nav.Item>
                 </div>
