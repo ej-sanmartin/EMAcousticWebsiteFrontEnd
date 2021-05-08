@@ -35,26 +35,20 @@ const Header = () => {
                                 </Nav.Link>
                             </Nav.Item>
                             <Nav.Item onClick={() => scrollTo('#about')}>
-                                <Nav.Link as="a" className={headerStyles.pageLinks}>
-                                    <Link to={createLinkProps('/#about')}>
-                                        About  
-                                    </Link>
-                                </Nav.Link>
+                                <Link as="a" className={headerStyles.pageLinks} to={createLinkProps('/#about')}>
+                                    About  
+                                </Link> 
                             </Nav.Item>
                             <Nav.Item onClick={() => scrollTo('#portfolio')}>
-                                <Nav.Link as="a" className={headerStyles.pageLinks}>
-                                    <Link to={createLinkProps('#portfolio')}>
-                                       Portfolio 
-                                    </Link>
-                                </Nav.Link>
+                                <Link as="a" className={headerStyles.pageLinks} to={createLinkProps('/#portfolio')}>
+                                    Portfolio
+                                </Link>
                             </Nav.Item>
-                            <Nav.Item onClick={() => scrollTo('#contact')}>
-                                <Nav.Link as="a" className={headerStyles.pageLinks}>
-                                    <Link to={createLinkProps('#contact')}>
+                                <Nav.Item onClick={() => scrollTo('#contact')}>
+                                    <Link as="a" className={headerStyles.pageLinks} to={createLinkProps('/#contact')}>
                                         Contact
                                     </Link>
-                                </Nav.Link>
-                            </Nav.Item>
+                                </Nav.Item>
                             <Nav.Item>
                                 <Nav.Link as="a" className={headerStyles.pageLinks}>
                                     <a className={headerStyles.pageLinks} href="tel:860-8888-1111">CALL NOW <FaPhoneAlt className={headerStyles.phoneIcon} style={{ fill: "white" }} />860-888-1111</a>
