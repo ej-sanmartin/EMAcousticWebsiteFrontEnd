@@ -35,18 +35,24 @@ const Header = () => {
                                 </Nav.Link>
                             </Nav.Item>
                             <Nav.Item onClick={() => scrollTo('#about')}>
-                                <Nav.Link as="a" className={headerStyles.pageLinks} href={createLinkProps('#about')}>
-                                    About
+                                <Nav.Link as="a" className={headerStyles.pageLinks}>
+                                    <Link to={createLinkProps('/#about')}>
+                                        About  
+                                    </Link>
                                 </Nav.Link>
                             </Nav.Item>
                             <Nav.Item onClick={() => scrollTo('#portfolio')}>
-                                <Nav.Link as="a" className={headerStyles.pageLinks}  href={createLinkProps('#portfolio')}>
-                                    Portfolio
+                                <Nav.Link as="a" className={headerStyles.pageLinks}>
+                                    <Link to={createLinkProps('#portfolio')}>
+                                       Portfolio 
+                                    </Link>
                                 </Nav.Link>
                             </Nav.Item>
                             <Nav.Item onClick={() => scrollTo('#contact')}>
-                                <Nav.Link as="a" className={headerStyles.pageLinks} href={createLinkProps('#contact')}>
-                                    Contact
+                                <Nav.Link as="a" className={headerStyles.pageLinks}>
+                                    <Link to={createLinkProps('#contact')}>
+                                        Contact
+                                    </Link>
                                 </Nav.Link>
                             </Nav.Item>
                             <Nav.Item>
