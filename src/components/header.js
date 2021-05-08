@@ -1,11 +1,9 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Link } from 'gatsby';
 import { StaticImage } from 'gatsby-plugin-image';
-import { isIOS } from 'react-device-detect';
 import { detect } from 'detect-browser';
 import scrollTo from 'gatsby-plugin-smoothscroll';
-import { linkDestinationIds, classNameToFind } from '../assets/content/text.js';
 import { Navbar, Nav, Container } from 'react-bootstrap';
 import { FaPhoneAlt } from '@react-icons/all-files/fa/FaPhoneAlt';
 import * as headerStyles from '../styles/header.module.scss';
@@ -31,27 +29,27 @@ const Header = () => {
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" className={headerStyles.responsiveHamburger} />
                     <Navbar.Collapse id="responsive-navbar-nav" className={headerStyles.responsiveCollapse}>
                         <Nav className="justify-content-end" style={{ width: "100%" }}>
-                            <Nav.Item as="button">
-                                <Nav.Link>
-                                   <a className={headerStyles.pageLinks} to="/">Home</a> 
+                            <Nav.Item as="a">
+                                <Nav.Link className={headerStyles.pageLinks} to="/">
+                                   Home
                                 </Nav.Link>
                             </Nav.Item>
-                            <Nav.Item as="button" onClick={() => scrollTo('#about')}>
-                                <Nav.Link {...createLinkProps('#about')}>
-                                    <a className={`${headerStyles.pageLinks} ${headerStyles.pageLinkSelector}`}>About</a>
+                            <Nav.Item as="a" onClick={() => scrollTo('#about')}>
+                                <Nav.Link className={headerStyles.pageLinks} {...createLinkProps('#about')}>
+                                    About
                                 </Nav.Link>
                             </Nav.Item>
-                            <Nav.Item as="button" onClick={() => scrollTo('#portfolio')}>
-                                <Nav.Link {...createLinkProps('#portfolio')}>
-                                    <a className={`${headerStyles.pageLinks} ${headerStyles.pageLinkSelector}`}>Portfolio</a>
+                            <Nav.Item as="a" onClick={() => scrollTo('#portfolio')}>
+                                <Nav.Link className={headerStyles.pageLinks}  {...createLinkProps('#portfolio')}>
+                                    Portfolio
                                 </Nav.Link>
                             </Nav.Item>
-                            <Nav.Item as="button" onClick={() => scrollTo('#contact')}>
-                                <Nav.Link {...createLinkProps('#contact')}>
-                                    <a className={`${headerStyles.pageLinks} ${headerStyles.pageLinkSelector}`}>Contact</a>
+                            <Nav.Item as="a" className={headerStyles.pageLinkIgnoreStyle} onClick={() => scrollTo('#contact')}>
+                                <Nav.Link className={headerStyles.pageLinks} {...createLinkProps('#contact')}>
+                                    Contact
                                 </Nav.Link>
                             </Nav.Item>
-                            <Nav.Item as="button">
+                            <Nav.Item as="a">
                                 <Nav.Link>
                                     <a className={headerStyles.pageLinks} href="tel:860-8888-1111">CALL NOW <FaPhoneAlt className={headerStyles.phoneIcon} style={{ fill: "white" }} />860-888-1111</a>
                                 </Nav.Link>

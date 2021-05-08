@@ -8,7 +8,6 @@ import { AiOutlineHome } from '@react-icons/all-files/ai/AiOutlineHome';
 import { HiOutlineMail } from '@react-icons/all-files/hi/HiOutlineMail';
 import { BiUpArrow } from '@react-icons/all-files/bi/BiUpArrow';
 import scrollTo from 'gatsby-plugin-smoothscroll';
-import { isIOS } from 'react-device-detect';
 import { detect } from 'detect-browser';
 
 const Footer = () => {
@@ -47,7 +46,7 @@ const Footer = () => {
                     <p className={footerStyles.copyright}>Copyright © R.C. Acousticals {year}. All Rights Reserved</p>  
                 </div>
                 <div className={footerStyles.topButtonContainer}>
-                    <Nav.Item style={{ marginBottom: "1em" }} as="button" onClick={() => scrollTo('#top')}>
+                    <Nav.Item style={{ marginBottom: "1em" }} as="a" onClick={() => scrollTo('#top')}>
                         <Nav.Link as="a" {...createLinkProps('#top')}>
                             <IconContext.Provider value={{ size: '3em', color: 'white' }}>
                                 <BiUpArrow style={{ fill: "white" }} />

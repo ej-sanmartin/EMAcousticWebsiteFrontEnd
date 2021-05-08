@@ -90,10 +90,6 @@ and (-webkit-device-pixel-ratio: 3) {
     }
 }
 
-.page-link-selector {
-    z-index: inherit;
-}
-
 .navbar {
     position: absolute;
     top: 0;
@@ -126,6 +122,15 @@ button {
 .nav-link-a-tag {
     a:focus, a:active {
         outline: none;
+    }
+}
+
+a {
+    color: white !important;
+
+    &:hover {
+        color: white !important;
+        text-decoration: none;
     }
 }
 
