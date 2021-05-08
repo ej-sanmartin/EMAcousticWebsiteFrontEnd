@@ -10,7 +10,7 @@ import * as headerStyles from '../styles/header.module.scss';
 
 const Header = () => {
     const browser = detect();
-    const createLinkProps = (id) => browser.name === `safari` ? { href: id } : {};
+    const createLinkProps = (id) => browser.name === `safari` ? this.href = id : {};
 
     return (
         <header id="top" className={headerStyles.navbar}>
