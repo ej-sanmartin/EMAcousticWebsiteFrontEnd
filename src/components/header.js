@@ -29,28 +29,28 @@ const Header = () => {
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" className={headerStyles.responsiveHamburger} />
                     <Navbar.Collapse id="responsive-navbar-nav" className={headerStyles.responsiveCollapse}>
                         <Nav className="justify-content-end" style={{ width: "100%" }}>
-                            <Nav.Item as="a">
-                                <Nav.Link className={headerStyles.pageLinks} to="/">
+                            <Nav.Item>
+                                <Nav.Link as="a" className={headerStyles.pageLinks} to="/">
                                    Home
                                 </Nav.Link>
                             </Nav.Item>
-                            <Nav.Item as="a" onClick={() => scrollTo('#about')}>
-                                <Nav.Link className={headerStyles.pageLinks} {...createLinkProps('#about')}>
+                            <Nav.Item onClick={() => scrollTo('#about')}>
+                                <Nav.Link as="a" className={headerStyles.pageLinks} {...createLinkProps('#about')}>
                                     About
                                 </Nav.Link>
                             </Nav.Item>
-                            <Nav.Item as="a" onClick={() => scrollTo('#portfolio')}>
-                                <Nav.Link className={headerStyles.pageLinks}  {...createLinkProps('#portfolio')}>
+                            <Nav.Item onClick={() => scrollTo('#portfolio')}>
+                                <Nav.Link as="a" className={headerStyles.pageLinks}  {...createLinkProps('#portfolio')}>
                                     Portfolio
                                 </Nav.Link>
                             </Nav.Item>
-                            <Nav.Item as="a" className={headerStyles.pageLinkIgnoreStyle} onClick={() => scrollTo('#contact')}>
-                                <Nav.Link className={headerStyles.pageLinks} {...createLinkProps('#contact')}>
+                            <Nav.Item onClick={() => scrollTo('#contact')}>
+                                <Nav.Link as="a" className={headerStyles.pageLinks} {...createLinkProps('#contact')}>
                                     Contact
                                 </Nav.Link>
                             </Nav.Item>
-                            <Nav.Item as="a">
-                                <Nav.Link>
+                            <Nav.Item>
+                                <Nav.Link as="a">
                                     <a className={headerStyles.pageLinks} href="tel:860-8888-1111">CALL NOW <FaPhoneAlt className={headerStyles.phoneIcon} style={{ fill: "white" }} />860-888-1111</a>
                                 </Nav.Link>
                             </Nav.Item>
