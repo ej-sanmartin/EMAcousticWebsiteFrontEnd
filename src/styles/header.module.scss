@@ -126,9 +126,10 @@ button {
 }
 
 a {
+    width: fit-content;
     text-align: center !important;
+    margin: auto !important;
     color: white !important;
-    z-index: 11 !important;
 
     &:hover {
         color: white !important;
