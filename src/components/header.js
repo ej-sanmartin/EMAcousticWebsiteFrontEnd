@@ -53,7 +53,7 @@ const Header = () => {
                                 </Nav.Link>
                             </Nav.Item>
                             <Nav.Item>
-                                <Nav.Link as="a" className={headerStyles.pageLinks}>
+                                <Nav.Link>
                                     <a className={headerStyles.pageLinks} href="tel:860-8888-1111">CALL NOW <FaPhoneAlt className={headerStyles.phoneIcon} style={{ fill: "white" }} />860-888-1111</a>
                                 </Nav.Link>
                             </Nav.Item>
