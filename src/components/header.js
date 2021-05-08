@@ -10,7 +10,7 @@ import * as headerStyles from '../styles/header.module.scss';
 
 const Header = () => {
     const browser = detect();
-    const createLinkProps = (id) => browser.name === `safari` ? this.href = id : {};
+    const createLinkProps = (id) => browser.name === `safari` ? id : null;
 
     return (
         <header id="top" className={headerStyles.navbar}>
@@ -35,17 +35,17 @@ const Header = () => {
                                 </Nav.Link>
                             </Nav.Item>
                             <Nav.Item onClick={() => scrollTo('#about')}>
-                                <Nav.Link as="a" className={headerStyles.pageLinks} {...createLinkProps('#about')}>
+                                <Nav.Link as="a" className={headerStyles.pageLinks} href={createLinkProps('#about')}>
                                     About
                                 </Nav.Link>
                             </Nav.Item>
                             <Nav.Item onClick={() => scrollTo('#portfolio')}>
-                                <Nav.Link as="a" className={headerStyles.pageLinks}  {...createLinkProps('#portfolio')}>
+                                <Nav.Link as="a" className={headerStyles.pageLinks}  href={createLinkProps('#portfolio')}>
                                     Portfolio
                                 </Nav.Link>
                             </Nav.Item>
                             <Nav.Item onClick={() => scrollTo('#contact')}>
-                                <Nav.Link as="a" className={headerStyles.pageLinks} {...createLinkProps('#contact')}>
+                                <Nav.Link as="a" className={headerStyles.pageLinks} href={createLinkProps('#contact')}>
                                     Contact
                                 </Nav.Link>
                             </Nav.Item>
