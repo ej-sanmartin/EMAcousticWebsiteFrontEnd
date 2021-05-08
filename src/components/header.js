@@ -2,15 +2,14 @@ import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Link } from 'gatsby';
 import { StaticImage } from 'gatsby-plugin-image';
-import { detect } from 'detect-browser';
+import { isIOS } from 'react-device-detect';
 import scrollTo from 'gatsby-plugin-smoothscroll';
 import { Navbar, Nav, Container } from 'react-bootstrap';
 import { FaPhoneAlt } from '@react-icons/all-files/fa/FaPhoneAlt';
 import * as headerStyles from '../styles/header.module.scss';
 
 const Header = () => {
-    const browser = detect();
-    const createLinkProps = (id) => /*browser.name === `safari`*/ true ? id : null;
+    const createLinkProps = (id) => isIOS ? id : null;
 
     return (
         <header id="top" className={headerStyles.navbar}>
