@@ -41,18 +41,21 @@ const Header = () => {
                                         About  
                                     </Link>                 
                                 </Nav.Link>
-
                             </Nav.Item>
                             <Nav.Item onClick={() => scrollTo('#portfolio')}>
-                                <Link as="a" className={headerStyles.pageLinks} to={createLinkProps('/#portfolio')}>
-                                    Portfolio
-                                </Link>
+                                <Nav.Link>
+                                    <Link as="a" className={headerStyles.pageLinks} to={createLinkProps('/#portfolio')}>
+                                        Portfolio
+                                    </Link>   
+                                </Nav.Link>
                             </Nav.Item>
-                                <Nav.Item onClick={() => scrollTo('#contact')}>
+                            <Nav.Item onClick={() => scrollTo('#contact')}>
+                                <Nav.Link>
                                     <Link as="a" className={headerStyles.pageLinks} to={createLinkProps('/#contact')}>
                                         Contact
-                                    </Link>
-                                </Nav.Item>
+                                    </Link>    
+                                </Nav.Link>
+                            </Nav.Item>
                             <Nav.Item>
                                 <Nav.Link as="a" className={headerStyles.pageLinks}>
                                     <a className={headerStyles.pageLinks} href="tel:860-8888-1111">CALL NOW <FaPhoneAlt className={headerStyles.phoneIcon} style={{ fill: "white" }} />860-888-1111</a>
