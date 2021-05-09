@@ -149,6 +149,10 @@
         flex-basis: 100% !important;
     }
 
+    .form-placement {
+        margin-top: 18% !important;
+    }
+
     .content-container {
         min-height: 130vh !important;
         iframe {
@@ -187,10 +191,6 @@ and (-webkit-device-pixel-ratio: 2) {
     .portfolio-heading-container {
         min-height: 40vh !important;
         padding-top: 1.5em !important;
-    }
-
-    .form-placement {
-        top: 15% !important;
     }
 
     .content-container {
