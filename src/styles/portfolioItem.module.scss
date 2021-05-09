@@ -188,6 +188,77 @@ and (-webkit-device-pixel-ratio: 2) {
     }
 }
 
+// Samsung S5 and Moto G4 landscape oriented styles
+@media only screen
+and (min-device-width: 360px)
+and (max-device-height: 640px)
+and (orientation: landscape)
+and (-webkit-device-pixel-ratio: 3) {
+    .header-box {
+        height: 26vh !important;
+    }
+
+    .portfolio-heading-container {
+        padding-top: 1.5em !important;
+
+        div {
+            h3 {
+                font-size: 1.5em !important;
+            }
+
+            p {
+                font-size: .9em !important;
+            }
+        }
+    }
+
+    .main-image {
+        max-height: 70vh !important;
+    }
+
+    .project-details {
+        margin: 2em auto !important;
+        text-align: start !important;
+        margin-bottom: 4em !important;
+
+        h1 {
+            font-size: 2em !important;
+        }
+    }
+
+    ul {
+        li {
+            p {
+                font-size: 1.25em !important;
+            }
+        }
+    }
+
+    div {
+        p {
+            font-size: 1.25em !important;
+        }
+    }
+
+    .gallery-line {
+        width: 90% !important
+    }
+
+    .gallery {
+        width: 75% !important;
+        margin-bottom: 3em !important;
+
+        div {
+            height: 270px !important;
+        }
+    }
+
+    .return-button {
+        padding-left: 43% !important;
+        padding-right: 43% !important;
+    }
+}
+
 .header-box {
     width: 100vw;
     height: 25vh;
