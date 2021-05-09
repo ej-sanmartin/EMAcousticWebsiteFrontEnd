@@ -16,7 +16,7 @@ const Home = () => {
     if(isMobile) sal({ disabled: true });
 
     // in case background image goes blank, just make the text not white
-    if(isAndroid){
+    if(isAndroid && messagesClassNames){
       let targetElement = document.querySelector("div").querySelector("div").querySelector("div").querySelector("div");
       let openingRemarks = targetElement.querySelectorAll(".home-module--opening-message-container--2NAu_");
       openingRemarks.forEach((message) => {
@@ -27,7 +27,7 @@ const Home = () => {
 
       targetElement.querySelector(".home-module--parallax--2Mgdj").style.backgroundAttachment = "scroll";
       iterator = 0;
-    }
+    } else { console.log("messageClassNames is most likely not set . Developers, get your act together!"); }
   }, []);
 
   const data = useStaticQuery(graphql`

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'gatsby';
 import * as footerStyles from '../styles/footer.module.scss';
 import { footerCompanySummary } from '../assets/content/text.js';
 import { Row, Col, Container, Nav } from 'react-bootstrap';
@@ -8,6 +9,7 @@ import { AiOutlineHome } from '@react-icons/all-files/ai/AiOutlineHome';
 import { HiOutlineMail } from '@react-icons/all-files/hi/HiOutlineMail';
 import { BiUpArrow } from '@react-icons/all-files/bi/BiUpArrow';
 import scrollTo from 'gatsby-plugin-smoothscroll';
+import { createLinkProps } from '../utilities/helpers.js';
 
 const NonHomeFooter = () => {
     // keeps copyright year current forever
@@ -44,9 +46,11 @@ const NonHomeFooter = () => {
                 <div className={footerStyles.topButtonContainer}>
                     <Nav.Item style={{ marginBottom: "1em" }} as="button" onClick={() => scrollTo('#items-top')}>
                         <Nav.Link>
-                            <IconContext.Provider value={{ size: '3em', color: 'white' }}>
-                                <BiUpArrow style={{ fill: "white" }} />
-                            </IconContext.Provider>
+                            <Link to={createLinkProps('/#items-top')}>
+                                <IconContext.Provider value={{ size: '3em', color: 'white' }}>
+                                    <BiUpArrow style={{ fill: "white" }} />
+                                </IconContext.Provider>          
+                            </Link>
                         </Nav.Link>
                     </Nav.Item>
                 </div>

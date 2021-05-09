@@ -27,8 +27,10 @@ const Header = () => {
                     <Navbar.Collapse id="responsive-navbar-nav" className={headerStyles.responsiveCollapse}>
                         <Nav className="justify-content-end" style={{ width: "100%" }}>
                             <Nav.Item>
-                                <Nav.Link as="a" className={headerStyles.pageLinks} to="/">
-                                   Home
+                                <Nav.Link>
+                                    <Link as="a" className={headerStyles.pageLinks} to="/">
+                                        Home
+                                    </Link>    
                                 </Nav.Link>
                             </Nav.Item>
                             <Nav.Item onClick={() => scrollTo('#about')}>

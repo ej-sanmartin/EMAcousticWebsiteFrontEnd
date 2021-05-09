@@ -4,6 +4,7 @@
 @media only screen
 and (min-device-width: 350px)
 and (max-device-width: 667px)
+and (orientation: portrait)
 and (-webkit-min-device-pixel-ratio: 2) {
 
     .logo {
@@ -31,7 +32,7 @@ and (-webkit-min-device-pixel-ratio: 2) {
 
 /* For mobile iphones <8, in landscape orientation */
 @media only screen
-and (min-device-width: 319px)
+and (min-device-width: 642px)
 and (max-device-width: 668px)
 and (orientation: landscape)
 and (-webkit-device-pixel-ratio: 2) {
@@ -39,7 +40,7 @@ and (-webkit-device-pixel-ratio: 2) {
     .navbar-layout {
         display: flex;
         justify-content: center;
-        margin-top: -13.5em;
+        margin-top: -.5em;
     }
 
     .responsive-collapse {
@@ -50,6 +51,7 @@ and (-webkit-device-pixel-ratio: 2) {
     }
 
     .logo {
+        top: .5em;
         max-width: 80px !important;
         max-width:  80px !important;
     }
