@@ -176,9 +176,9 @@ and (-webkit-device-pixel-ratio: 3) {
     }
 
     h2 {
-        font-size: 6em;
-        margin-top: 3rem;
-        margin-bottom: 3rem;
+        font-size: 12em;
+        margin-top: 12rem;
+        margin-bottom: 2rem;
         
         &::after {
             content: "!";
@@ -191,6 +191,7 @@ and (-webkit-device-pixel-ratio: 3) {
     }
 
     .return-button {
+        margin-top: 1em !important;
         color: $light-font-colour;
         border: $light-font-colour solid 1px;
         padding: .6em;
