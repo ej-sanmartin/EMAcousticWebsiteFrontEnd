@@ -68,6 +68,26 @@ and (-webkit-device-pixel-ratio: 2) {
     }
 }
 
+// Samsung S5 and Moto G4 landscape oriented styles
+@media only screen
+and (min-device-width: 360px)
+and (max-device-height: 640px)
+and (orientation: landscape)
+and (-webkit-device-pixel-ratio: 3) {
+    
+    .contact-form-layout {
+        width: 90vw !important;
+    }
+
+    .form-item-layout, .inner-form-layout, .contact-message {
+        flex-basis: 100%;
+    }
+
+    .contact-blurb {
+        margin-top: 2em !important;
+    }
+}
+
 label {
     color: $label-colour;
 }

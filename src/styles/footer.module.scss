@@ -68,6 +68,36 @@ and (min-device-width: 319px)
 and (max-device-width: 668px)
 and (orientation: landscape)
 and (-webkit-device-pixel-ratio: 2) {
+
+    footer {
+        clip-path: polygon(0 2.5%, 100% 0, 100% 100%, 0% 100%) !important;
+    }
+
+    .footer-info {
+        flex-direction: column !important;
+
+        div {
+            max-width: 100% !important;
+            margin-top: 2em;
+        }
+    }
+
+    .copyright {
+        margin-top: 2em;
+    }
+
+    .top-button-container {
+        margin-bottom: 2em !important;
+    }
+}
+
+// Samsung S5 and Moto G4 landscape oriented styles
+@media only screen
+and (min-device-width: 360px)
+and (max-device-height: 640px)
+and (orientation: landscape)
+and (-webkit-device-pixel-ratio: 3) {
+
     footer {
         clip-path: polygon(0 2.5%, 100% 0, 100% 100%, 0% 100%) !important;
     }

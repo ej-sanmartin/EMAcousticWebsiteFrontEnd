@@ -83,13 +83,29 @@ and (-webkit-device-pixel-ratio: 3) {
 
     .logo {
         max-width: 80px !important;
-        max-width:  80px !important;
     }
 
     .page-links {
         letter-spacing: .1em;
         font-size: .48em;
     }
+}
+
+// Samsung S5 and Moto G4 landscape oriented styles
+@media only screen
+and (min-device-width: 360px)
+and (max-device-height: 640px)
+and (orientation: landscape)
+and (-webkit-device-pixel-ratio: 3) {
+
+    .logo {
+        max-width: 90px !important;
+    }
+
+    .page-links {
+        font-size: .75em !important;
+    }
+
 }
 
 .navbar {
