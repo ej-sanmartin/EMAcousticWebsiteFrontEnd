@@ -1,6 +1,8 @@
 import React, { useEffect } from "react";
 import { graphql, useStaticQuery, Link } from 'gatsby';
 import { isMobile, isAndroid } from 'react-device-detect';
+import scrollTo from 'gatsby-plugin-smoothscroll';
+import { createLinkProps } from '../utilities/helpers.js';
 import sal from 'sal.js';
 import Layout from '../components/layout';
 import ContactForm from '../components/contactForm';
@@ -56,6 +58,14 @@ const Home = () => {
       <div className={homeStyles.openingMessageContainer}>
         <h2 className={homeStyles.firstOpeningPhrase}>Over 20 years of excellence</h2>
         <h2 className={homeStyles.secondOpeningPhrase}>We take pride in our impact</h2>
+        <a className={homeStyles.ctaButton} onClick={() => scrollTo('#contact')}>
+          <Link
+            as="a"
+            to={createLinkProps('/#contact')}
+          >
+          Let's Get Started
+          </Link>
+        </a>
       </div>
       <div id="about"></div>
       <div

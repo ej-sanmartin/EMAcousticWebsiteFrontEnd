@@ -12,7 +12,8 @@
     }
 
     .first-opening-phrase,
-    .second-opening-phrase {
+    .second-opening-phrase,
+    .cta-button {
         font-size: 4em !important;
         animation-name: fade-in !important;
         animation-duration: 400ms;
@@ -20,8 +21,13 @@
         text-align: center !important;
     }
 
+    .cta-button {
+        font-size: 4em !important;
+        padding: .5em !important;
+    }
+
     .first-opening-phrase {
-        margin-top: -1em !important;
+        padding-top: 0.5em !important;
     }
 
     .sub-heading-text-styles {
@@ -81,6 +87,15 @@
 
     .opening-message-container::after {
         bottom: -5% !important;
+    }
+
+    .cta-button {
+        font-size: 1em !important;
+        padding: .5em !important;
+    }
+
+    .first-opening-phrase {
+        padding-top: 3em !important;
     }
 
     .parallax {
@@ -169,16 +184,25 @@ and (orientation: landscape)
 and (-webkit-device-pixel-ratio: 2) {
     
     .opening-message-container {
-        margin-top: 2em;
+        margin-top: -1em;
 
         &::after {
-            bottom: -2% !important;
+            bottom: -15.5% !important;
         }
     }
 
     .first-opening-phrase, .second-opening-phrase {
         font-size: 1.25em !important;
         max-width: 30ch !important;
+    }
+
+    .cta-button {
+        font-size: 1em !important;
+        padding: .5em !important;
+    }
+
+    .first-opening-phrase {
+        margin-top: -4em !important;
     }
 
     .about-container {
@@ -209,7 +233,6 @@ and (orientation: landscape)
 and (-webkit-device-pixel-ratio: 3) {
     
     .opening-message-container {
-        margin-top: 2em;
 
         &::after {
             bottom: -2% !important;
@@ -219,6 +242,11 @@ and (-webkit-device-pixel-ratio: 3) {
     .first-opening-phrase, .second-opening-phrase {
         font-size: 1.25em !important;
         max-width: 30ch !important;
+    }
+
+    .cta-button {
+        font-size: 1em !important;
+        padding: .5em !important;
     }
 
     .about-container {
@@ -246,16 +274,21 @@ and (orientation: landscape)
 and (-webkit-device-pixel-ratio: 3) {
 
     .opening-message-container {
-        margin-top: 1em !important;
+        margin-top: -1em !important;
 
         &::after {
-            bottom: -7% !important;
+            bottom: -16% !important;
         }
     }
 
     .first-opening-phrase, .second-opening-phrase {
         font-size: 1.25em !important;
         max-width: 30ch !important;
+    }
+
+    .cta-button {
+        font-size: 1em !important;
+        padding: .5em !important;
     }
 
     .about-container {
@@ -326,6 +359,38 @@ h1, h2, h3, h4, h5, p {
     background: white;
     bottom: -4.5%;
     transform: rotate(-1.5deg);
+}
+
+.cta-button {
+    margin-top: 1.5em !important;
+    border: 1px solid $light-font-colour;
+    font-size: 2em;
+    font-weight: bold;
+    border-radius: 20px;
+    padding: .5em;
+    text-transform: uppercase;
+
+    animation-name: fade-in-from-bottom;
+    animation-duration: 1000ms;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+    animation-delay: 2200ms;
+    opacity: 0;
+
+    &:hover {
+        text-decoration: none;
+        background-color: $light-font-colour;
+        color: black !important;
+        opacity: .9;
+        transition: 300ms;
+    }
+
+    &:focus {
+        opacity: .95;
+        background-color: grey;
+        transition: 400ms;
+    }
 }
 
 .content-container {
@@ -461,6 +526,7 @@ h1, h2, h3, h4, h5, p {
 
 .first-opening-phrase {
     @include attention-text-large;
+    margin-top: 5.5em !important;
     animation-name: fade-in-from-left;
     animation-duration: 900ms;
     animation-iteration-count: 1;
@@ -559,6 +625,18 @@ div {
     100% {
         opacity: 1;
         margin-right: -30%;
+    }
+}
+
+@keyframes fade-in-from-bottom {
+    0% {
+        opacity: 0;
+        margin-bottom: -75%;
+    }
+
+    100% {
+        opacity: 1;
+        margin-bottom: -30%;
     }
 }
 
