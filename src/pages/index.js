@@ -6,6 +6,7 @@ import { createLinkProps } from '../utilities/helpers.js';
 import sal from 'sal.js';
 import Layout from '../components/layout';
 import ContactForm from '../components/contactForm';
+import ServiceCard from '../components/cards/serviceCard';
 import { aboutBlurb, serviceCardEntries, messagesClassNames } from '../assets/content/text.js';
 import * as homeStyles from '../styles/home.module.scss';
 
@@ -93,21 +94,10 @@ const Home = () => {
         className={homeStyles.servicesContainer}
       >
         <div className={homeStyles.serviceCardsLayout}>
-
-          {serviceCardEntries.map((service) => {
-            return (
-              <div className={homeStyles.serviceCard}>
-                <img
-                  src={service.image}
-                  alt={service.imageAlt}
-                  className={homeStyles.serviceCardImage}
-                />
-                <h5>{service.service}</h5>
-                <p>{service.description}</p>
-              </div>
+          {serviceCardEntries.map((service) => { return (
+              <ServiceCard service={service} />
             );
           })}
-
         </div>
       </div>
       <div id="portfolio"></div>
