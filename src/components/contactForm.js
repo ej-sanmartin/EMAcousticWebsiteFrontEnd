@@ -26,7 +26,7 @@ export default class ContactForm extends Component {
                             <p>860 - 888 - 1111</p>
                             <p>contact@rc_acoustics.com</p>
                             <div className={contactFormStyles.contactBlurb}>
-                                <p>Let's talk about your project.</p>
+                                <p>Let's talk about how we could help you.</p>
                                 <p>~ Eliseo</p>
                             </div>
                         </div>

@@ -8,6 +8,7 @@ import Layout from '../components/layout';
 import ContactForm from '../components/contactForm';
 import ServiceCard from '../components/cards/serviceCard';
 import PortfolioCard from '../components/cards/portfolioCard';
+import SEO from '../components/meta/seo';
 import { aboutBlurb, serviceCardEntries, messagesClassNames } from '../assets/content/text.js';
 import * as homeStyles from '../styles/home.module.scss';
 
@@ -31,7 +32,7 @@ const Home = () => {
 
       targetElement.querySelector(".home-module--parallax--2Mgdj").style.backgroundAttachment = "scroll";
       iterator = 0;
-    } else { console.log("messageClassNames is most likely not set . Developers, get your act together!"); }
+    }
   }, []);
 
   const data = useStaticQuery(graphql`
@@ -56,6 +57,7 @@ const Home = () => {
 
   return (
     <Layout>
+      <SEO />
       <div className={`${homeStyles.openingImage} ${homeStyles.parallax}`}></div>
       <div className={homeStyles.openingMessageContainer}>
         <h2 className={homeStyles.firstOpeningPhrase}>Over 20 years of excellence</h2>

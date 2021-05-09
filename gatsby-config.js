@@ -1,7 +1,9 @@
 module.exports = {
   siteMetadata: {
     title: 'R.C. Acoustics',
-    author: 'Edgar J San Martin'
+    author: 'Edgar J San Martin',
+    description: 'Your go to solution for all your acoustical problems. 20 Years of excellence. We take pride in our impact.',
+    // url: ''
   },
   plugins: [
     'gatsby-plugin-sass',

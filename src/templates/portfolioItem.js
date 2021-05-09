@@ -3,6 +3,7 @@ import { graphql, Link } from 'gatsby';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 import { Carousel } from 'react-bootstrap';
 import NonHomeLayout from '../components/nonHomeLayout';
+
 import * as portfolioItemStyles from '../styles/portfolioItem.module.scss';
 
 export const query = graphql`
