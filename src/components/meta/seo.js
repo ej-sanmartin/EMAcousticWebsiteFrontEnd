@@ -17,14 +17,10 @@ const query = graphql`
 const SEO = ({ newTitle, newDescription }) => {
     const { site } = useStaticQuery(query);
 
-    console.log(`Site: ${site}`);
-
     const seo = {
         title: newTitle || site.siteMetadata.title,
         description: newDescription || site.siteMetadata.description,
     };
-
-    console.log(`SEO: ${seo}`);
 
     return (
         <Helmet title={seo.title}>
