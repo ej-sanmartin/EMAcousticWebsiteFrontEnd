@@ -7,6 +7,7 @@ import sal from 'sal.js';
 import Layout from '../components/layout';
 import ContactForm from '../components/contactForm';
 import ServiceCard from '../components/cards/serviceCard';
+import PortfolioCard from '../components/cards/portfolioCard';
 import { aboutBlurb, serviceCardEntries, messagesClassNames } from '../assets/content/text.js';
 import * as homeStyles from '../styles/home.module.scss';
 
@@ -114,27 +115,13 @@ const Home = () => {
           </div>
         </div>
         <div className={homeStyles.portfolioGallery}>
-
         {data.allContentfulPortfolioProfile.edges.map((edge) => {
-          let image = edge.node.projectHeaderPhoto.fluid.src;
-
           return (
-            <Link className={homeStyles.portfolioItem} to={`/portfolio/${edge.node.slug}`}>
-              <img
-                src={image}
-                className={homeStyles.portfolioItemImage}
-                alt={edge.node.projectHeaderPhoto.title}
-              />
-              <div className={homeStyles.portfolioItemImageOverlay}>
-                <h4 className={homeStyles.portfolioItemTitle}>{edge.node.projectName}</h4>
-                <p className={homeStyles.portfolioItemLocation}>{edge.node.location}</p>
-              </div>
-            </Link>
+            <PortfolioCard edge={edge} />
           );
         })}
         </div>
       </div>
-
       <div id="contact"></div>
       <div
         data-sal="slide-up"
