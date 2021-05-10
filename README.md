@@ -1,23 +1,16 @@
 # E&M Acoustic Website, a GatsbyJs Static Site
-<br />
 
 ## What is this project?
 ---
 Coded and designed a GatsbyJS Web Application to be responsive on all devices, hooked to Contentful's API to query via GraphQL and able to send contact form info to owner's email address.
 
-<br />
-
 ## Why was this built?
 ---
 Client project.
 
-<br />
-
 ## Tech Used
 ---
 JavaScript, ES6, GatsbyJs, Sass, Netlify, GraphQL
-
-<br />
 
 ## Requirements
 ---
@@ -30,22 +23,18 @@ JavaScript, ES6, GatsbyJs, Sass, Netlify, GraphQL
     - GATSBY_CONTENTFUL_SPACE_ID
     - GATSBY_CONTENTFUL_ACCESS_TOKEN
     - GATSBY_GOOGLE_MAPS_EMBED_API_TOKEN
-    - GATSBY_GOOGLE_MAPS_PLACE_ID
-    
+    - GATSBY_GOOGLE_MAPS_PLACE_ID 
     
     - WILL NOT RUN WITHOUT THESE ENVIRONMENT VARIABLES SET
-
-<br />
-
 ## How to start environment
 ---
+Run the following commands
+
 `git clone https://github.com/ej-sanmartin/EMAcousticWebsiteFrontEnd`
 
 `cd EMAcousticWebsiteFrontEnd`
 
 `npm run develop`
-
-<br />
 
 ## Folder Structure
 ---
@@ -63,8 +52,6 @@ And then we have a templates folder which holds a React component file that will
 
 Finally, we have a utilities folder which holds files for commonly used functions throughout the project.
 
-<br />
-
 ## Things To Improve
 ----
 - Clean up index.js file (home page) in pages folder. Can separate every section.
@@ -74,14 +61,10 @@ Finally, we have a utilities folder which holds files for commonly used function
 - Android bug where on smaller phones home page image does not display
 - Add test files
 
-<br />
-
 ## Contributers
 ---
 - Edgar J San Martin (Main Developer)
 - Dibash Chhetri (Helped fix link and smooth scroll error on mobile devices and Safari)
-
-<br />
 
 ## Copyright
 ---
