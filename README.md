@@ -14,7 +14,7 @@ JavaScript, ES6, GatsbyJs, Sass, Netlify, GraphQL
 
 ## Requirements
 ---
-- Node v 13.3.0 (issues with other Node versions)
+- Node v 12.14.1 (issues with other Node versions)
 - NPM v 7.11.1
 - Gatsby CLI version: 3.4.1
 - Gatsby version: 2.32.13
