@@ -1,19 +1,22 @@
 # E&M Acoustic Website, a GatsbyJs Static Site
 
+
 ## What is this project?
----
+
 Coded and designed a GatsbyJS Web Application to be responsive on all devices, hooked to Contentful's API to query via GraphQL and able to send contact form info to owner's email address.
 
+
 ## Why was this built?
----
+
 Client project.
 
+
 ## Tech Used
----
+
 JavaScript, ES6, GatsbyJs, Sass, Netlify, GraphQL
 
 ## Requirements
----
+
 - Node v 13.3.0 (issues with other Node versions)
 - NPM v 7.11.1
 - Gatsby CLI version: 3.4.1
@@ -26,8 +29,10 @@ JavaScript, ES6, GatsbyJs, Sass, Netlify, GraphQL
     - GATSBY_GOOGLE_MAPS_PLACE_ID 
     
     - WILL NOT RUN WITHOUT THESE ENVIRONMENT VARIABLES SET
+
+
 ## How to start environment
----
+
 Run the following commands
 
 `git clone https://github.com/ej-sanmartin/EMAcousticWebsiteFrontEnd`
@@ -36,8 +41,9 @@ Run the following commands
 
 `npm run develop`
 
+
 ## Folder Structure
----
+
 All the code written by myself can be found in src/.
 
 There, you'll find an assets folder which has two sub folders; one for images and another for all static text contents.
@@ -52,8 +58,9 @@ And then we have a templates folder which holds a React component file that will
 
 Finally, we have a utilities folder which holds files for commonly used functions throughout the project.
 
+
 ## Things To Improve
-----
+
 - Clean up index.js file (home page) in pages folder. Can separate every section.
 - Clean up styles files (lots of !important tag used in media queries).
 - Layout vs nonHomeLayout files are the same, one will have smooth scroll to chosen IDs and the other one just sends you to another page. Seems like there is a cleaner, programmer way to solve this so we don't have to have two different file sets.
@@ -61,11 +68,13 @@ Finally, we have a utilities folder which holds files for commonly used function
 - Android bug where on smaller phones home page image does not display
 - Add test files
 
+
 ## Contributers
----
+
 - Edgar J San Martin (Main Developer)
 - Dibash Chhetri (Helped fix link and smooth scroll error on mobile devices and Safari)
 
+
 ## Copyright
----
+
 © Edgar J San Martin 2021
