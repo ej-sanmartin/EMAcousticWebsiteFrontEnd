@@ -1,5 +1,6 @@
 # E&M Acoustic Website, a GatsbyJs Static Site
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/22e74733-ea3f-43ac-b730-56037af1f681/deploy-status)](https://app.netlify.com/sites/rc-acousticals/deploys)
 
 ## What is this project?
 

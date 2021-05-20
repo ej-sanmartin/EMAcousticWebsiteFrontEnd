@@ -12,7 +12,7 @@ export const query = graphql`
             projectName
             location
             generalContractor
-            projectData(formatString: "MMMM Do, YYYY")
+            projectDate(formatString: "MMMM Do, YYYY")
             projectDescription {
                 raw
             }

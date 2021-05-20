@@ -37,7 +37,7 @@ const Home = () => {
 
   const data = useStaticQuery(graphql`
     query {
-      allContentfulPortfolioProfile ( sort: { fields: projectData, order: DESC } ) {
+      allContentfulPortfolioProfile ( sort: { fields: projectDate, order: DESC } ) {
         edges {
           node {
             projectName
